@@ -1,0 +1,13 @@
+.principal{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    .fotosSeguridad{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        > img{
+            width: 20%;
+            box-shadow: 15px 15px 15px;
+        }
+    }
+}

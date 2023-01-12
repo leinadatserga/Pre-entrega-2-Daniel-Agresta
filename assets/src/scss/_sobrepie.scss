@@ -1,0 +1,24 @@
+.sobrePie{
+    grid-column: 1/4;
+    grid-row: 5/6;
+    .upperFoot{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 3px solid;
+        padding: 5px;
+        font-size: 20px;
+        .sobrePie1{
+            padding: 6px;
+        }
+        .sobrePie2{
+            padding: 6px;
+            color: $color1;
+            font-weight: bold;
+            text-shadow: 3px 3px 1px white;
+        }
+        .sobrePie3{
+            padding: 6px;
+        }
+    }
+}

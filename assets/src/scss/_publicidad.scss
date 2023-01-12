@@ -1,0 +1,42 @@
+.publicidad{
+    font-family: fredoka;
+    background-image: radial-gradient(aquamarine 60%, rgb(13, 156, 156));
+    display: flex;
+    flex-direction: column;
+    border: 16px solid;
+    border-color: $color1;
+    border-radius: 1000px;
+    padding: 25px;
+    background-color: aquamarine;
+    margin: 60px 10px 80px;
+    align-items: center;
+    .publicidad__pub1{
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        color: forestgreen;
+        font-size: 60px;
+        font-style: italic;
+    }
+    .publicidad__pub2{
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        font-weight: bolder;
+        font-size: 25px;
+    }
+    .publicidad__pub3{
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        font-size: 25px;
+        color: brown;
+    }
+    .publicidad__pub4{
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        font-size: 25px;
+        color: brown;
+    }
+}

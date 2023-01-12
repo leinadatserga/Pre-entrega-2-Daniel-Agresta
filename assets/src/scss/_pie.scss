@@ -1,0 +1,24 @@
+footer{
+    grid-column: 1/4;
+    grid-row: 6/7;
+    .pie{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 40px 0px 20px;
+        background-color: lavender;
+        border-radius: 10px;
+        .pie__0{
+            font-style: oblique;
+            font-weight: bolder;
+        }
+        .pie__1{
+            font-size: 10px;
+            font-weight: bold;
+        }
+        .pie__2{
+            font-style: italic;
+            color: $color1;
+        }
+    }
+}
