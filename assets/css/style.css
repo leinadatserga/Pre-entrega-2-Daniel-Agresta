@@ -235,20 +235,17 @@ footer .pie .pie__2 {
   grid-column: 1/4;
   grid-row: 2/3;
 }
-
-.servicios {
+.headServicios .servicios {
   display: flex;
   justify-content: space-between;
   padding: 0px 25px;
 }
-
-.servicios .logoChico {
+.headServicios .servicios .logoChico {
   width: 25%;
   height: 25%;
   box-shadow: 15px 15px 15px;
 }
-
-.servicios .titServicios {
+.headServicios .servicios .titServicios {
   height: min-content;
   font-size: 90px;
   font-weight: bolder;
@@ -262,8 +259,7 @@ footer .pie .pie__2 {
   border-radius: 28px;
   box-shadow: 15px 15px 15px black;
 }
-
-.chat {
+.headServicios .servicios .chat {
   display: block;
   border: 3px solid;
   border-radius: 9px;
@@ -274,20 +270,16 @@ footer .pie .pie__2 {
   background-color: rgb(195, 231, 219);
   box-shadow: 15px 15px 15px black;
 }
-
-.chat > fieldset {
+.headServicios .servicios .chat fieldset {
   height: 100%;
 }
-
-.chat > fieldset > textarea {
+.headServicios .servicios .chat fieldset > textarea {
   width: 100%;
 }
-
-.chat fieldset input {
+.headServicios .servicios .chat fieldset > input {
   padding: 10px;
 }
-
-.chat fieldset a button {
+.headServicios .servicios .chat fieldset > a > button {
   padding: 10px;
   font-family: fredoka;
   font-weight: bolder;
@@ -300,13 +292,15 @@ footer .pie .pie__2 {
   grid-column: 1/4;
   grid-row: 3/4;
 }
-
-.serviciosPrincipal {
+.serPri .serviciosPrincipal {
   display: flex;
   justify-content: space-evenly;
 }
-
-.listServicios li {
+.serPri .serviciosPrincipal .listServicios > li {
+  margin: 40px;
+  width: 85%;
+  border-radius: 16px;
+  box-shadow: 15px 15px 15px black;
   list-style: none;
   padding: 20px;
   font-family: fredoka;
@@ -314,13 +308,6 @@ footer .pie .pie__2 {
   color: indigo;
   background-color: rgb(195, 231, 219);
   border-radius: 16px;
-}
-
-.listServicios > li {
-  margin: 40px;
-  width: 85%;
-  border-radius: 16px;
-  box-shadow: 15px 15px 15px black;
 }
 
 .imgServicios > img {

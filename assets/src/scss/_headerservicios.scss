@@ -1,0 +1,59 @@
+.headServicios{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    .servicios{ 
+        display: flex;
+        justify-content: space-between;  
+        padding: 0px 25px;
+        .logoChico{
+            width: 25%;
+            height: 25%;
+            box-shadow: 15px 15px 15px;
+        }
+        .titServicios{
+            height: min-content;
+            font-size: 90px;
+            font-weight: bolder;
+            font-family: fredoka; color: $color1;
+            padding: 10px;
+            border: 18px solid;
+            border-style: double;
+            border-color: $color2;
+            background-color: $colorPrincipal;
+            border-radius: 28px;
+            box-shadow: 15px 15px 15px black;
+        }
+        .chat{
+            display: block;
+            border: 3px solid;
+            border-radius: 9px;
+            border-color: darkgreen;
+            font-family: fredoka;
+            color: $color1;
+            padding: 5px;
+            background-color: $colorPrincipal;
+            box-shadow: 15px 15px 15px black;
+            fieldset{
+                height: 100%;
+                > textarea{
+                    width: 100%;
+                }
+                > input{
+                    padding: 10px;
+                }
+                > a{
+                    > button{
+                        padding: 10px;
+                        font-family: fredoka;
+                        font-weight: bolder;
+                        color: $color1;
+                        border-radius: 5px;
+                        background-color: $colorPrincipal;
+                    }
+                }
+            
+            }
+        
+        }
+    }
+}

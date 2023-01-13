@@ -14,85 +14,33 @@
 
 /*__________SERVICIOS__________*/
 
+@import "headerservicios";
 
 
-.headServicios{
-    grid-column: 1/4;
-    grid-row: 2/3;
-}
-.servicios{ 
-    display: flex;
-    justify-content: space-between;  
-    padding: 0px 25px;
-}
-.servicios .logoChico{
-    width: 25%;
-    height: 25%;
-    box-shadow: 15px 15px 15px;
-}
-.servicios .titServicios{
-    height: min-content;
-    font-size: 90px;
-    font-weight: bolder;
-    font-family: fredoka; color: $color1;
-    padding: 10px;
-    border: 18px solid;
-    border-style: double;
-    border-color: $color2;
-    background-color: $colorPrincipal;
-    border-radius: 28px;
-    box-shadow: 15px 15px 15px black;
-}
-.chat{
-    display: block;
-    border: 3px solid;
-    border-radius: 9px;
-    border-color: darkgreen;
-    font-family: fredoka;
-    color: $color1;
-    padding: 5px;
-    background-color: $colorPrincipal;
-    box-shadow: 15px 15px 15px black; 
-}
-.chat > fieldset{
-    height: 100%;
-}
-.chat > fieldset > textarea{
-    width: 100%;
-}
-.chat fieldset input{
-    padding: 10px;
-}
-.chat fieldset a button{
-    padding: 10px;
-    font-family: fredoka;
-    font-weight: bolder;
-    color: $color1;
-    border-radius: 5px;
-    background-color: $colorPrincipal;
-}
+
+ 
 .serPri{
     grid-column: 1/4;
     grid-row: 3/4;
-}
-.serviciosPrincipal{
-    display: flex;
-    justify-content: space-evenly;
-}
-.listServicios li{
-    list-style: none;
-    padding: 20px;
-    font-family: fredoka;
-    font-size: 40px;
-    color: $color1;
-    background-color: $colorPrincipal;
-    border-radius: 16px;
-}
-.listServicios > li{
-    margin: 40px;
-    width: 85%;
-    border-radius: 16px;
-    box-shadow: 15px 15px 15px black;
+    .serviciosPrincipal{
+        display: flex;
+        justify-content: space-evenly;
+        .listServicios{
+            > li{
+                margin: 40px;
+                width: 85%;
+                border-radius: 16px;
+                box-shadow: 15px 15px 15px black;
+                list-style: none;
+                padding: 20px;
+                font-family: fredoka;
+                font-size: 40px;
+                color: $color1;
+                background-color: $colorPrincipal;
+                border-radius: 16px;
+            }
+        }
+    }
 }
 .imgServicios > img{
     width: 40%;
