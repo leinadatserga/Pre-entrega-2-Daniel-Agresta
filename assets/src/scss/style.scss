@@ -24,42 +24,43 @@
 .listaProd{
     grid-column: 1/4;
     grid-row: 2/3;
+    .productos{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0px 60px;
+        .logoChico{
+            width: 25%;
+            height: 25%;
+            box-shadow: 15px 15px 15px black;
+        }
+        .titProductos{
+            font-size: 90px;
+            font-weight: bolder;
+            font-family: fredoka; color: $color1;
+            padding: 10px;
+            border: 18px solid;
+            border-style: double;
+            border-color: $color2;
+            background-color: $colorPrincipal;
+            border-radius: 28px;
+            box-shadow: 15px 15px 15px black;
+        }
+        .prod{
+            width: 20%;
+            border: 3px solid;
+            border-radius: 9px;
+            border-color: darkgreen;
+            font-family: fredoka;
+            color: $color1;
+            padding: 5px;
+            background-color: $colorPrincipal;
+            box-shadow: 15px 15px 15px black;  
+        }
+    }
 }
-.productos{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px 60px;
-}
-.productos .logoChico{
-    width: 25%;
-    height: 25%;
-    box-shadow: 15px 15px 15px black;
-}
-.productos .titProductos{
-    font-size: 90px;
-    font-weight: bolder;
-    font-family: fredoka; color: $color1;
-    padding: 10px;
-    border: 18px solid;
-    border-style: double;
-    border-color: $color2;
-    background-color: $colorPrincipal;
-    border-radius: 28px;
-    box-shadow: 15px 15px 15px black;
-}
-.prod{
-    width: 20%;
-    border: 3px solid;
-    border-radius: 9px;
-    border-color: darkgreen;
-    font-family: fredoka;
-    color: $color1;
-    padding: 5px;
-    background-color: $colorPrincipal;
-    box-shadow: 15px 15px 15px black;  
-}
+
 .prod ol li{
     padding: 10px;
     margin-left: 36px;
