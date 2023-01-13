@@ -309,8 +309,7 @@ footer .pie .pie__2 {
   background-color: rgb(195, 231, 219);
   border-radius: 16px;
 }
-
-.imgServicios > img {
+.serPri .serviciosPrincipal .imgServicios > img {
   width: 40%;
   padding: 15px;
   margin-left: 4%;
@@ -321,12 +320,10 @@ footer .pie .pie__2 {
   box-shadow: 15px 15px 15px black;
   transition: 2s;
 }
-
-.imgServicios > img:hover {
+.serPri .serviciosPrincipal .imgServicios > img:hover {
   transform: scale(2);
 }
-
-.descServicios {
+.serPri .serviciosPrincipal .descServicios {
   padding: 20px;
   width: 100%;
   height: min-content;

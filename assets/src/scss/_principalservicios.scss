@@ -1,0 +1,51 @@
+.serPri{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    .serviciosPrincipal{
+        display: flex;
+        justify-content: space-evenly;
+        .listServicios{
+            > li{
+                margin: 40px;
+                width: 85%;
+                border-radius: 16px;
+                box-shadow: 15px 15px 15px black;
+                list-style: none;
+                padding: 20px;
+                font-family: fredoka;
+                font-size: 40px;
+                color: $color1;
+                background-color: $colorPrincipal;
+                border-radius: 16px;
+            }
+        }
+        .imgServicios{
+            > img{
+                width: 40%;
+                padding: 15px;
+                margin-left: 4%;
+                border: 14px solid;
+                border-radius: 10px;
+                border-color: $color2;
+                border-style: double;
+                box-shadow: 15px 15px 15px black;
+                transition: 2s;
+                &:hover{
+                    transform: scale(2);
+                }
+            }
+        }
+        .descServicios{
+            padding: 20px;
+            width: 100%;
+            height: min-content;
+            margin-right: 3%;
+            font-family: fredoka;
+            font-size: 33px;
+            color: $color1;
+            background-color: $colorPrincipal;
+            border-radius: 16px;
+            box-shadow: 15px 15px 15px black;
+        }
+    }
+}
