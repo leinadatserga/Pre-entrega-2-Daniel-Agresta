@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Destacados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="shortcut icon" href="../assets/img/Icono AG.jpeg" type="image/x-icon">
 </head>
 <body class="grillaPrincipal">
     <nav class="navIni">
         <div class="botonesInicio">
-            <button><a href="./contacto.html#nombre">Registrarse</a></button>
+            <button><a href="./contacto.html#nombre">Registro</a></button>
             <button><a href="">+ a favoritos</a></button>
         </div>
         <div class="navegadorEnlaces">
+            <i class="fa-solid fa-bars"></i>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
@@ -28,10 +30,10 @@
             <img src="../assets/img/qr_img.png" alt="qr">
         </div>
     </nav>
-    <header>
-        <div class="contacto">
+    <header class="destacados">
+        <div class="destaque">
             <img src="../assets/img/pared-hecha-piedras_1127-286.jpg" alt="logo" class="logoChico">
-            <h1 class="titContacto">Destacados</h1>
+            <h1 class="titDestacados">Destacados</h1>
             <div class="ingCliente">
                 <form action="" method="get" enctype="application/x-www-form-urlencoded">
                     <fieldset>
@@ -57,17 +59,18 @@
                         <br>
                         <br>
                         <label>->->->->->->->
-                            <input type="submit" value="Ingresar">
+                            <input class="ingreso" type="submit" value="Ingresar">
                         </label>    
                     </fieldset>
                 </form>
             </div>
         </div>
     </header>
-    <main>
-        <h2 class="canal">- Canal de novedades -</h2>
+    <h2 class="canal">- Canal de novedades -</h2>
+    <main class="canalNovedades">
+        
         <div class="canal__video">
-            <p class="canal__video__parr">A continuación les dejamos un avance con nuestras ofertas <strong>imperdibles</strong> en productos destacados. Pinche al costado del video para relizar su reserva. Promociones válidas durante el mes hasta agotar stock. <strong>No los dejes pasar!</strong></p>
+            <p class="canal__video__parr">A continuación les dejamos un avance con nuestras ofertas <strong>imperdibles</strong> en productos destacados. Pinche al costado del video para relizar su reserva. Promociones válidas durante el mes hasta agotar stock. <strong>No las deje pasar!</strong></p>
             <video class="canal__video__vid" src="./video/GRMN4905.MP4" controls loop muted>Ofertas imperdibles</video>
             <div class="canal__video__res">
                 <ul class="canal__video__res__enl">

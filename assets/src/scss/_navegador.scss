@@ -5,63 +5,157 @@
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(180deg, aquamarine, transparent);
-}
-.botonesInicio{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    > button{
-        margin: 15px;
-        padding: 5px;
-        border-radius: 7px;
-        &:hover{
-            transform: scale(1.25);
-            box-shadow: 4px 4px 8px;
-        }
-        > a{
-            text-decoration: none;
-            font-size: 25px;
-            font-family: fredoka;
-        }
-    }
-} 
-.navegadorEnlaces{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    > ul{
-        display: flex;
-        list-style-type: none;
-        margin: 15px;
-        > li{
+    .botonesInicio{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        > button{
+            margin: 15px 10px;
+            padding: 2px;
             border: 3px solid;
             border-radius: 7px;
-            border-color: $color1;
-            background-color: $color2;
-            margin: 0px 10px;
             &:hover{
-            transform: scale(1.25);
-            box-shadow: 4px 4px 8px;
+                transform: scale(1.25);
+                box-shadow: 4px 4px 8px;
             }
             > a{
                 text-decoration: none;
-                padding: 10px;
                 font-size: 25px;
                 font-family: fredoka;
-                
+            }
+        }
+    } 
+    .navegadorEnlaces{
+        .fa-bars{
+            font-size: 30px;
+            font-weight: bolder;
+            display: none;
+        }
+        > ul{
+            display: flex;
+            list-style-type: none;
+            margin: 15px;
+            > li{
+                border: 3px solid;
+                border-radius: 7px;
+                border-color: $color1;
+                background-color: $color2;
+                margin: 0px 10px;
+                &:hover{
+                transform: scale(1.25);
+                box-shadow: 4px 4px 8px;
+                }
+                > a{
+                    text-decoration: none;
+                    padding: 10px;
+                    font-size: 25px;
+                    font-family: fredoka;
+                    
+                }
             }
         }
     }
-}
-.visitenos{
-    grid-column: 3/4;
-    grid-row: 1/2;
-    > h3{
-        margin: 15px;
-        font-size: 25px;
-        font-family: fredoka;
+    .visitenos{
+        grid-column: 3/4;
+        grid-row: 1/2;
+        > h3{
+            margin: 15px;
+            font-size: 25px;
+            font-family: fredoka;
+        }
+        > img{
+            width: 50%;
+            padding: 15px;
+            margin: 0px auto;
+            justify-self: center;
+        }
     }
-    > img{
-        padding: 15px;
-        margin: 0px auto;
-        justify-self: center;
+}
+@media (max-width:1400px){
+    .navIni{  
+        width: 100%;
+        .botonesInicio{
+            position: absolute;
+            top: 50px;
+            z-index: 3;
+            > button{
+                margin: 15px;
+                padding: 5px;
+                border-radius: 7px;
+                &:hover{
+                    transform: scale(1.25);
+                    box-shadow: 4px 4px 8px;
+                }
+                > a{
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-family: fredoka;
+                }
+            }
+        }
+        .navegadorEnlaces{
+            position: absolute;
+            > ul > li{
+                border: 2px solid;
+                > a{
+                    margin: 2px;
+                    font-size: 20px;
+                }
+            }
+        }
+        .visitenos{
+            position: absolute;
+            top: 57px;
+            left: 500px;
+            z-index: 2;
+            >h3{
+                font-size: 20px;
+                margin: 5px;
+            }
+        }
+    }
+    
+}
+@media (max-width:768px){
+    .navIni{
+        background-image: none;
+        grid-column: 2/4;
+        justify-content: end;
+        .navegadorEnlaces{
+            z-index: 3;
+            .fa-bars{
+                justify-content: end;
+                text-align: end;
+                z-index: 1;
+                font-size: 50px;
+                margin: 10px;
+                font-weight: bolder;
+                display: block;
+            }
+            > ul{
+                flex-direction: column;
+                > li{
+                    margin: 10px;
+                    padding: 5px;
+                    > a{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .botonesInicio{
+            display: flex;
+            flex-direction: column;
+            margin:15px;
+            top: 413px;
+            > button{
+                margin: 10px;
+                > a{
+                    font-size: 30px;
+                }
+            }
+        }
+        .visitenos{
+            display: none;
+        }
     }
 }

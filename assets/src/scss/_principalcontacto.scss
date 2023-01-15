@@ -1,0 +1,46 @@
+.principalContacto{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    .formRegistro{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        .registrese{
+            padding: 25px;
+            margin: 40px 0px;
+            font-family: fredoka;
+            font-size: 50px;
+            color: $color1;
+        }
+        > form{
+            font-family: fredoka;
+            color: coral;
+            width: 400px; 
+            border: 6px solid;
+            border-radius: 16px;
+            background-color: $colorPrincipal;
+            padding: 10px;
+            box-shadow: $sombra;
+            > label{
+                padding: 20px;
+            }
+            > legend{
+                color: indigo;
+            }
+            .resEnv{
+                padding: 6px;
+                font-size: 16px;
+                font-weight: bolder;
+                font-style: oblique;
+                color: brown;
+                border: 2px solid;
+                border-radius: 10px;
+                margin: 5px;
+            }
+        }
+    }
+    .formRegistro form{
+        padding: 6px;
+    }
+}

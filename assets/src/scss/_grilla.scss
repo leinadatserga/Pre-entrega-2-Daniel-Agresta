@@ -5,6 +5,13 @@
     background-blend-mode:lighten;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 304px 440px 400px 600px 200px 100px;
+    grid-template-rows: 280px 440px 400px 600px 200px 100px;
     gap: 0px 15px;
+}
+@media (max-width:1400px){
+    .grillaPrincipal{
+        display: grid;
+        grid-template-rows: 250px 440px 400px 700px 200px 100px;
+        align-content: center;
+    }
 }

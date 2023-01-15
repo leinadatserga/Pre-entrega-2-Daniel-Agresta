@@ -1,4 +1,5 @@
 .publicidad{
+    height: 90%;
     font-family: fredoka;
     background-image: radial-gradient(aquamarine 60%, rgb(13, 156, 156));
     display: flex;
@@ -9,6 +10,7 @@
     padding: 25px;
     background-color: aquamarine;
     margin: 60px 10px 80px;
+    justify-content: center;
     align-items: center;
     .publicidad__pub1{
         display: flex;
@@ -17,6 +19,7 @@
         color: forestgreen;
         font-size: 60px;
         font-style: italic;
+        text-align: center;
     }
     .publicidad__pub2{
         display: flex;
@@ -24,6 +27,7 @@
         padding: 15px;
         font-weight: bolder;
         font-size: 25px;
+        text-align: center;
     }
     .publicidad__pub3{
         display: flex;
@@ -31,6 +35,7 @@
         padding: 15px;
         font-size: 25px;
         color: brown;
+        text-align: center;
     }
     .publicidad__pub4{
         display: flex;
@@ -38,5 +43,24 @@
         padding: 15px;
         font-size: 25px;
         color: brown;
+        text-align: center;
     }
+    @media (max-width:1000px){
+        .publicidad__pub1{
+            font-size: 40px;
+            padding: 10px;
+        }
+        .publicidad__pub2{
+            padding: 10px;
+            font-size: 20px;
+        }
+        .publicidad__pub3{
+            padding: 10px;
+            font-size: 20px;
+        }
+        .publicidad__pub4{
+            padding: 10px;
+            font-size: 20px;
+        }   
+}
 }

@@ -1,14 +1,21 @@
+@media (max-width:1400px){
+    .titServicios{
+        font-size: 50px;
+        color: black;
+    }
+
+}
 .headServicios{
     grid-column: 1/4;
     grid-row: 2/3;
     .servicios{ 
         display: flex;
         justify-content: space-between;  
-        padding: 0px 25px;
+        padding: 20px 25px;
         .logoChico{
             width: 25%;
             height: 25%;
-            box-shadow: 15px 15px 15px;
+            box-shadow: $sombra;
         }
         .titServicios{
             height: min-content;
@@ -21,7 +28,14 @@
             border-color: $color2;
             background-color: $colorPrincipal;
             border-radius: 28px;
-            box-shadow: 15px 15px 15px black;
+            box-shadow: $sombra;
+            
+        }
+        @media (max-width:1400px){
+            .titServicios{
+                font-size: 50px;
+                color: black;
+            }
         }
         .chat{
             display: block;
@@ -55,5 +69,12 @@
             }
         
         }
+    }
+    @media (max-width:1400px){
+        .titServicios{
+            font-size: 50px;
+            color: black;
+        }
+    
     }
 }

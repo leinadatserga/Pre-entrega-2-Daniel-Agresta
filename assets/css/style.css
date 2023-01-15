@@ -17,10 +17,17 @@
   background-blend-mode: lighten;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 304px 440px 400px 600px 200px 100px;
+  grid-template-rows: 280px 440px 400px 600px 200px 100px;
   gap: 0px 15px;
 }
 
+@media (max-width: 1400px) {
+  .grillaPrincipal {
+    display: grid;
+    grid-template-rows: 250px 440px 400px 700px 200px 100px;
+    align-content: center;
+  }
+}
 .navIni {
   grid-column: 1/4;
   grid-row: 1/2;
@@ -29,68 +36,156 @@
   justify-content: space-between;
   background-image: linear-gradient(180deg, aquamarine, transparent);
 }
-
-.botonesInicio {
+.navIni .botonesInicio {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.botonesInicio > button {
-  margin: 15px;
-  padding: 5px;
+.navIni .botonesInicio > button {
+  margin: 15px 10px;
+  padding: 2px;
+  border: 3px solid;
   border-radius: 7px;
 }
-.botonesInicio > button:hover {
+.navIni .botonesInicio > button:hover {
   transform: scale(1.25);
   box-shadow: 4px 4px 8px;
 }
-.botonesInicio > button > a {
+.navIni .botonesInicio > button > a {
   text-decoration: none;
   font-size: 25px;
   font-family: fredoka;
 }
-
-.navegadorEnlaces {
-  grid-column: 2/3;
-  grid-row: 1/2;
+.navIni .navegadorEnlaces .fa-bars {
+  font-size: 30px;
+  font-weight: bolder;
+  display: none;
 }
-.navegadorEnlaces > ul {
+.navIni .navegadorEnlaces > ul {
   display: flex;
   list-style-type: none;
   margin: 15px;
 }
-.navegadorEnlaces > ul > li {
+.navIni .navegadorEnlaces > ul > li {
   border: 3px solid;
   border-radius: 7px;
   border-color: indigo;
   background-color: coral;
   margin: 0px 10px;
 }
-.navegadorEnlaces > ul > li:hover {
+.navIni .navegadorEnlaces > ul > li:hover {
   transform: scale(1.25);
   box-shadow: 4px 4px 8px;
 }
-.navegadorEnlaces > ul > li > a {
+.navIni .navegadorEnlaces > ul > li > a {
   text-decoration: none;
   padding: 10px;
   font-size: 25px;
   font-family: fredoka;
 }
-
-.visitenos {
+.navIni .visitenos {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-.visitenos > h3 {
+.navIni .visitenos > h3 {
   margin: 15px;
   font-size: 25px;
   font-family: fredoka;
 }
-.visitenos > img {
+.navIni .visitenos > img {
+  width: 50%;
   padding: 15px;
   margin: 0px auto;
   justify-self: center;
 }
 
+@media (max-width: 1400px) {
+  .navIni {
+    width: 100%;
+  }
+  .navIni .botonesInicio {
+    position: absolute;
+    top: 50px;
+    z-index: 3;
+  }
+  .navIni .botonesInicio > button {
+    margin: 15px;
+    padding: 5px;
+    border-radius: 7px;
+  }
+  .navIni .botonesInicio > button:hover {
+    transform: scale(1.25);
+    box-shadow: 4px 4px 8px;
+  }
+  .navIni .botonesInicio > button > a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: fredoka;
+  }
+  .navIni .navegadorEnlaces {
+    position: absolute;
+  }
+  .navIni .navegadorEnlaces > ul > li {
+    border: 2px solid;
+  }
+  .navIni .navegadorEnlaces > ul > li > a {
+    margin: 2px;
+    font-size: 20px;
+  }
+  .navIni .visitenos {
+    position: absolute;
+    top: 57px;
+    left: 500px;
+    z-index: 2;
+  }
+  .navIni .visitenos > h3 {
+    font-size: 20px;
+    margin: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .navIni {
+    background-image: none;
+    grid-column: 2/4;
+    justify-content: end;
+  }
+  .navIni .navegadorEnlaces {
+    z-index: 3;
+  }
+  .navIni .navegadorEnlaces .fa-bars {
+    justify-content: end;
+    text-align: end;
+    z-index: 1;
+    font-size: 50px;
+    margin: 10px;
+    font-weight: bolder;
+    display: block;
+  }
+  .navIni .navegadorEnlaces > ul {
+    flex-direction: column;
+  }
+  .navIni .navegadorEnlaces > ul > li {
+    margin: 10px;
+    padding: 5px;
+  }
+  .navIni .navegadorEnlaces > ul > li > a {
+    font-size: 30px;
+  }
+  .navIni .botonesInicio {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    top: 413px;
+  }
+  .navIni .botonesInicio > button {
+    margin: 10px;
+  }
+  .navIni .botonesInicio > button > a {
+    font-size: 30px;
+  }
+  .navIni .visitenos {
+    display: none;
+  }
+}
 .logoInicio {
   grid-column: 2/3;
   grid-row: 2/3;
@@ -99,45 +194,91 @@
 }
 .logoInicio > img {
   height: 100%;
-  box-shadow: 15px 15px 15px;
+  box-shadow: 15px 15px 15px black;
+  border-radius: 20px;
   animation-name: movlogo;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-  animation-delay: 5s;
+  animation-delay: 0s;
 }
-
+@media (max-width: 1000px) {
+  .logoInicio > img {
+    height: 80%;
+  }
+}
 @keyframes movlogo {
   0% {
-    transform: translate(0, 0);
+    transform: scale(1.05);
   }
   25% {
-    transform: translate(0px, -200px);
+    transform: scale(1);
+    opacity: 20%;
   }
   50% {
-    transform: translate(0px, -200px);
+    transform: scale(1.05);
+    opacity: 100%;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 100%;
   }
   75% {
-    transform: translate(0px, -200px);
+    transform: scale(1);
+    opacity: 20%;
   }
   100% {
-    transform: translate(0, 0);
+    transform: scale(1.05);
   }
 }
+@media (max-width: 768px) {
+  .logoInicio > img {
+    height: 90%;
+    opacity: 60%;
+    box-shadow: 15px 15px 15px black;
+    border-radius: 20px;
+    animation-name: mologo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+  }
+}
+@keyframes mologo {
+  0% {
+    transform: translateY(-180px);
+  }
+  100% {
+    transform: translateY(-180px);
+  }
+}
+
 .principal {
   grid-column: 1/4;
   grid-row: 3/4;
 }
 .principal .fotosSeguridad {
+  margin-top: 8%;
   display: flex;
   justify-content: space-between;
   padding: 20px;
 }
 .principal .fotosSeguridad > img {
   width: 20%;
-  box-shadow: 15px 15px 15px;
+  box-shadow: 15px 15px 15px black;
+}
+@media (max-width: 1000px) {
+  .principal .fotosSeguridad .fotosSeguridad {
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .principal .fotosSeguridad .fotosSeguridad > img {
+    box-shadow: 15px 15px 15px black;
+  }
 }
 
 .publicidad {
+  height: 90%;
   font-family: fredoka;
   background-image: radial-gradient(aquamarine 60%, rgb(13, 156, 156));
   display: flex;
@@ -148,6 +289,7 @@
   padding: 25px;
   background-color: aquamarine;
   margin: 60px 10px 80px;
+  justify-content: center;
   align-items: center;
 }
 .publicidad .publicidad__pub1 {
@@ -157,6 +299,7 @@
   color: forestgreen;
   font-size: 60px;
   font-style: italic;
+  text-align: center;
 }
 .publicidad .publicidad__pub2 {
   display: flex;
@@ -164,6 +307,7 @@
   padding: 15px;
   font-weight: bolder;
   font-size: 25px;
+  text-align: center;
 }
 .publicidad .publicidad__pub3 {
   display: flex;
@@ -171,6 +315,7 @@
   padding: 15px;
   font-size: 25px;
   color: brown;
+  text-align: center;
 }
 .publicidad .publicidad__pub4 {
   display: flex;
@@ -178,6 +323,25 @@
   padding: 15px;
   font-size: 25px;
   color: brown;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .publicidad .publicidad__pub1 {
+    font-size: 40px;
+    padding: 10px;
+  }
+  .publicidad .publicidad__pub2 {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .publicidad .publicidad__pub3 {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .publicidad .publicidad__pub4 {
+    padding: 10px;
+    font-size: 20px;
+  }
 }
 
 .sobrePie {
@@ -231,6 +395,12 @@ footer .pie .pie__2 {
 }
 
 /*__________SERVICIOS__________*/
+@media (max-width: 1400px) {
+  .titServicios {
+    font-size: 50px;
+    color: black;
+  }
+}
 .headServicios {
   grid-column: 1/4;
   grid-row: 2/3;
@@ -238,12 +408,12 @@ footer .pie .pie__2 {
 .headServicios .servicios {
   display: flex;
   justify-content: space-between;
-  padding: 0px 25px;
+  padding: 20px 25px;
 }
 .headServicios .servicios .logoChico {
   width: 25%;
   height: 25%;
-  box-shadow: 15px 15px 15px;
+  box-shadow: 15px 15px 15px black;
 }
 .headServicios .servicios .titServicios {
   height: min-content;
@@ -258,6 +428,12 @@ footer .pie .pie__2 {
   background-color: rgb(195, 231, 219);
   border-radius: 28px;
   box-shadow: 15px 15px 15px black;
+}
+@media (max-width: 1400px) {
+  .headServicios .servicios .titServicios {
+    font-size: 50px;
+    color: black;
+  }
 }
 .headServicios .servicios .chat {
   display: block;
@@ -286,6 +462,12 @@ footer .pie .pie__2 {
   color: indigo;
   border-radius: 5px;
   background-color: rgb(195, 231, 219);
+}
+@media (max-width: 1400px) {
+  .headServicios .titServicios {
+    font-size: 50px;
+    color: black;
+  }
 }
 
 .serPri {
@@ -346,7 +528,7 @@ footer .pie .pie__2 {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0px 60px;
+  padding: 20px 60px;
 }
 .listaProd .productos .logoChico {
   width: 25%;
@@ -377,23 +559,24 @@ footer .pie .pie__2 {
   background-color: rgb(195, 231, 219);
   box-shadow: 15px 15px 15px black;
 }
-
-.prod ol li {
+.listaProd .productos .prod > fieldset > ol > li {
   padding: 10px;
   margin-left: 36px;
 }
-
-.prod > fieldset > ol > li > a {
+.listaProd .productos .prod > fieldset > ol > li > a {
   text-decoration: none;
   list-style-type: none;
+}
+.listaProd .productos .prod > fieldset > ol > li > a:hover {
+  color: black;
+  font-style: oblique;
 }
 
 .fotosProd {
   grid-column: 1/4;
   grid-row: 3/4;
 }
-
-.tarjProductos {
+.fotosProd .tarjProductos {
   display: flex;
   justify-content: space-evenly;
   margin: 10px 20px;
@@ -405,43 +588,63 @@ footer .pie .pie__2 {
   box-shadow: 15px 15px 15px black;
   transition: 2s;
 }
-
-.tarjProductos__1 {
+.fotosProd .tarjProductos .tarjProductos__1 {
   background-image: url(../img/kit-alarma-residencial-dos-sensores-infrarrojo-y-un-magnetico-kit-alarma-residencial-dos-sensores-infrarrojo-y-un-magnetico.jpg);
-  transition: 2s;
+  transition: 0.5s;
 }
-
-.tarjProductos__2 {
+.fotosProd .tarjProductos .tarjProductos__1:hover {
+  transform: scale(0.98);
+  border: 2px solid;
+}
+.fotosProd .tarjProductos .tarjProductos__2 {
   background-image: url(../img/Cerca\ Elétrica\ Intelbras\ 5002\ 100\ Mts\ Cabo\ Aço\ E\ Haste\ 1\,20.jpg);
-  transition: 2s;
+  transition: 0.5s;
 }
-
-.tarjProductos__3 {
+.fotosProd .tarjProductos .tarjProductos__2:hover {
+  transform: scale(0.98);
+  border: 2px solid;
+}
+.fotosProd .tarjProductos .tarjProductos__3 {
   background-image: url(../img/Marcelo\ Pereto\ on\ Twitter.jpg);
-  transition: 2s;
+  transition: 0.5s;
 }
-
-.tarjProductos__4 {
+.fotosProd .tarjProductos .tarjProductos__3:hover {
+  transform: scale(0.98);
+  border: 2px solid;
+}
+.fotosProd .tarjProductos .tarjProductos__4 {
   background-image: url(../img/Best\ UPS\ for\ Wi-fi\ Router.jpg);
-  transition: 2s;
+  transition: 0.5s;
 }
-
-.tarjProductos__5 {
+.fotosProd .tarjProductos .tarjProductos__4:hover {
+  transform: scale(0.98);
+  border: 2px solid;
+}
+.fotosProd .tarjProductos .tarjProductos__5 {
   background-image: url(../img/Nvr\ Ip\ Hikvision\ 16\ Canais\ 4k\ Ds-7616ni-k2\ Sem\ Poe.jpg);
-  transition: 2s;
+  transition: 0.5s;
 }
-
-.tarjProductos__6 {
+.fotosProd .tarjProductos .tarjProductos__5:hover {
+  transform: scale(0.98);
+  border: 2px solid;
+}
+.fotosProd .tarjProductos .tarjProductos__6 {
   background-image: url(../img/All\ You\ Need\ to\ Know\ to\ Buy\ a\ Security\ Camera\ System.png);
-  transition: 2s;
+  transition: 0.5s;
 }
-
-.tarjProductos__7 {
+.fotosProd .tarjProductos .tarjProductos__6:hover {
+  transform: scale(0.98);
+  border: 2px solid;
+}
+.fotosProd .tarjProductos .tarjProductos__7 {
   background-image: url(../img/Kanlux\ 460\ Aler\ Jq-30-w\ Bewegungsmelder.jpg);
-  transition: 2s;
+  transition: 0.5s;
 }
-
-.tarjProductos div {
+.fotosProd .tarjProductos .tarjProductos__7:hover {
+  transform: scale(0.98);
+  border: 2px solid;
+}
+.fotosProd .tarjProductos div {
   background-blend-mode: lighten;
   border-radius: 15px;
   color: rgb(115, 15, 187);
@@ -455,40 +658,11 @@ footer .pie .pie__2 {
   overflow: hidden;
 }
 
-.tarjProductos__1:hover {
-  transform: rotateY(360deg);
-}
-
-.tarjProductos__2:hover {
-  transform: rotateY(360deg);
-}
-
-.tarjProductos__3:hover {
-  transform: rotateY(360deg);
-}
-
-.tarjProductos__4:hover {
-  transform: rotateY(360deg);
-}
-
-.tarjProductos__5:hover {
-  transform: rotateY(360deg);
-}
-
-.tarjProductos__6:hover {
-  transform: rotateY(360deg);
-}
-
-.tarjProductos__7:hover {
-  transform: rotateY(360deg);
-}
-
 .busqueda {
   grid-column: 1/4;
   grid-row: 4/5;
 }
-
-.busqProductos {
+.busqueda .busqProductos {
   font-family: fredoka;
   padding: 20px;
   margin-left: 20px;
@@ -500,18 +674,15 @@ footer .pie .pie__2 {
   width: 30%;
   box-shadow: 15px 15px 15px black;
 }
-
-.specProductos ul {
+.busqueda .specProductos ul {
   display: flex;
   justify-content: space-evenly;
   margin: auto;
 }
-
-.specProductos > ul > li {
+.busqueda .specProductos ul > li {
   list-style: none;
 }
-
-.specProductos > ul > li > button {
+.busqueda .specProductos ul > li > button {
   padding: 10px;
   font-size: 20px;
   font-weight: bolder;
@@ -524,8 +695,7 @@ footer .pie .pie__2 {
   background-color: rgb(195, 231, 219);
   box-shadow: 15px 15px 15px black;
 }
-
-.buscarProductos {
+.busqueda .buscarProductos {
   font-size: 30px;
   font-style: oblique;
   font-weight: bolder;
@@ -540,11 +710,202 @@ footer .pie .pie__2 {
   box-shadow: 15px 15px 15px black;
   text-shadow: 1px 1px 1px black;
 }
-
-.buscarProductos:hover {
+.busqueda .buscarProductos:hover {
   transform: rotateY(60deg);
   transform: scale(1.25, 1);
   text-shadow: 3px 3px white;
   background-color: rgb(87, 235, 185);
   color: red;
+}
+
+/*__________DESTACADOS__________*/
+.destacados {
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+.destacados .destaque {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 60px;
+}
+.destacados .destaque .logoChico {
+  width: 25%;
+  height: 25%;
+  box-shadow: 15px 15px 15px black;
+}
+.destacados .destaque .titDestacados {
+  font-size: 90px;
+  font-weight: bolder;
+  font-family: fredoka;
+  color: indigo;
+  padding: 10px;
+  border: 18px solid;
+  border-style: double;
+  border-color: coral;
+  background-color: rgb(195, 231, 219);
+  border-radius: 28px;
+  box-shadow: 15px 15px 15px black;
+}
+.destacados .destaque .ingCliente > form {
+  font-family: fredoka;
+  color: coral;
+  width: 400px;
+  border: 6px solid;
+  border-radius: 16px;
+  background-color: rgb(195, 231, 219);
+  padding: 10px;
+}
+.destacados .destaque .ingCliente > form legend {
+  color: indigo;
+}
+.destacados .destaque .ingCliente > form label {
+  padding: 20px;
+}
+.destacados .destaque .ingCliente > form label .ingreso {
+  font-family: fredoka;
+  color: indigo;
+  padding: 9px;
+}
+.destacados .destaque .ingCliente > form label .ingreso:hover {
+  padding: 8px;
+  border: 3px solid;
+  border-radius: 10px;
+}
+
+.canalNovedades {
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+.canalNovedades .canal {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: fredoka;
+  color: indigo;
+  font-size: 40px;
+}
+.canalNovedades .canal__video {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: 10px 20px;
+  border: 3px solid;
+  border-radius: 20px;
+  border-color: darkgreen;
+  padding: 10px;
+  background-color: rgb(195, 231, 219);
+  box-shadow: 15px 15px 15px black;
+  transition: 2s;
+}
+.canalNovedades .canal__video .canal__video__parr {
+  width: 20%;
+  font-family: fredoka;
+  font-size: 25px;
+}
+.canalNovedades .canal__video .canal__video__res {
+  width: 1fr;
+}
+.canalNovedades .canal__video .canal__video__res .canal__video__res__enl {
+  font-size: 25px;
+  list-style: none;
+}
+.canalNovedades .canal__video .canal__video__res .canal__video__res__enl > li {
+  margin: 10px;
+}
+.canalNovedades .canal__video .canal__video__res .canal__video__res__enl > li > a {
+  text-decoration: none;
+  font-family: fredoka;
+}
+.canalNovedades .canal__video .canal__video__vid {
+  height: 1fr;
+  width: auto;
+}
+
+/*__________CONTACTO__________*/
+.headContacto {
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+.headContacto .contacto {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 60px;
+}
+.headContacto .contacto .logoChico {
+  width: 25%;
+  height: 25%;
+  box-shadow: 15px 15px 15px black;
+}
+.headContacto .contacto .titContacto {
+  font-size: 90px;
+  font-weight: bolder;
+  font-family: fredoka;
+  color: indigo;
+  padding: 10px;
+  border: 18px solid;
+  border-style: double;
+  border-color: coral;
+  background-color: rgb(195, 231, 219);
+  border-radius: 28px;
+  box-shadow: 15px 15px 15px black;
+}
+.headContacto .contacto .mapa {
+  border: 3px solid;
+  border-radius: 9px;
+  border-color: darkgreen;
+  font-family: fredoka;
+  color: indigo;
+  padding: 5px;
+  background-color: rgb(195, 231, 219);
+  box-shadow: 15px 15px 15px black;
+}
+
+.principalContacto {
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+.principalContacto .formRegistro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.principalContacto .formRegistro .registrese {
+  padding: 25px;
+  margin: 40px 0px;
+  font-family: fredoka;
+  font-size: 50px;
+  color: indigo;
+}
+.principalContacto .formRegistro > form {
+  font-family: fredoka;
+  color: coral;
+  width: 400px;
+  border: 6px solid;
+  border-radius: 16px;
+  background-color: rgb(195, 231, 219);
+  padding: 10px;
+  box-shadow: 15px 15px 15px black;
+}
+.principalContacto .formRegistro > form > label {
+  padding: 20px;
+}
+.principalContacto .formRegistro > form > legend {
+  color: indigo;
+}
+.principalContacto .formRegistro > form .resEnv {
+  padding: 6px;
+  font-size: 16px;
+  font-weight: bolder;
+  font-style: oblique;
+  color: brown;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 5px;
+}
+.principalContacto .formRegistro form {
+  padding: 6px;
 }

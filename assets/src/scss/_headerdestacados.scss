@@ -1,0 +1,55 @@
+.destacados{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    .destaque{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px 60px;
+        .logoChico{
+            width: 25%;
+            height: 25%;
+            box-shadow: 15px 15px 15px black;
+        }
+        .titDestacados{
+            font-size: 90px;
+            font-weight: bolder;
+            font-family: fredoka; color: $color1;
+            padding: 10px;
+            border: 18px solid;
+            border-style: double;
+            border-color: $color2;
+            background-color: $colorPrincipal;
+            border-radius: 28px;
+            box-shadow: 15px 15px 15px black;
+        }
+        .ingCliente{
+            > form{
+                font-family: fredoka;
+                color: $color2;
+                width: 400px; 
+                border: 6px solid;
+                border-radius: 16px;
+                background-color: $colorPrincipal;
+                padding: 10px;
+                legend{
+                    color: $color1;
+                }
+                label{
+                    padding: 20px;
+                    .ingreso{
+                        font-family: fredoka;
+                        color: $color1;
+                        padding: 9px;
+                        &:hover{
+                            padding: 8px;
+                            border: 3px solid;
+                        border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

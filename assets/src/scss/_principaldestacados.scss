@@ -1,0 +1,49 @@
+.canalNovedades{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    .canal{
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: fredoka;
+        color: $color1;
+        font-size: 40px;
+    }
+    .canal__video{
+        display: flex;
+        justify-content: space-evenly;
+        align-content: center;
+        margin: 10px 20px;
+        border: 3px solid;
+        border-radius: 20px;
+        border-color: darkgreen;
+        padding: 10px;
+        background-color: $colorPrincipal;
+        box-shadow: 15px 15px 15px black;
+        transition: 2s;
+        .canal__video__parr{
+            width: 20%;
+            font-family: fredoka;
+            font-size: 25px;
+        }
+        .canal__video__res{
+            width: 1fr;
+            .canal__video__res__enl{
+                font-size: 25px;
+                list-style: none;
+                > li{
+                    > a{
+                        text-decoration: none;
+                        font-family: fredoka;
+                    }
+                    margin: 10px;
+                }
+    
+            }
+        }
+        
+        .canal__video__vid{
+            height: 1fr;
+            width: auto;
+        }
+    }
+}

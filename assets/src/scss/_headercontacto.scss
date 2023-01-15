@@ -1,0 +1,38 @@
+.headContacto{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    .contacto{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px 60px;
+        .logoChico{
+            width: 25%;
+            height: 25%;
+            box-shadow: $sombra;
+        }
+        .titContacto{
+            font-size: 90px;
+            font-weight: bolder;
+            font-family: fredoka; color: $color1;
+            padding: 10px;
+            border: 18px solid;
+            border-style: double;
+            border-color: coral;
+            background-color: $colorPrincipal;
+            border-radius: 28px;
+            box-shadow: $sombra;
+        }
+        .mapa{
+            border: 3px solid;
+            border-radius: 9px;
+            border-color: darkgreen;
+            font-family: fredoka;
+            color: indigo;
+            padding: 5px;
+            background-color: $colorPrincipal;
+            box-shadow: $sombra;
+        }
+    }
+}
