@@ -84,3 +84,37 @@
         }
     }
 }
+@media ($tablet){
+    .fotosProd{
+        grid-column: 1/4;
+        grid-row: 3/4;
+        margin-top: 50px;
+        width: 80%;
+        .tarjProductos{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            margin: 10px 20px;
+            border: 3px solid;
+            border-radius: 20px;
+            border-color: darkgreen;
+            padding: 10px;
+            background-color: $colorPrincipal;
+            box-shadow: $sombra;
+            transition: 2s;
+            div{
+                background-blend-mode:lighten;
+                border-radius: 15px;
+                color: rgb(115, 15, 187);
+                font-family: fredoka;
+                font-weight: bolder;
+                text-shadow: 2px 2px white;
+                padding: 10px;
+                width: 80%;
+                height: 160px;
+                background-size: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+}

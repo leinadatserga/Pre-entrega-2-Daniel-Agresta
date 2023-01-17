@@ -22,9 +22,9 @@
 }
 .grillaPrincipal .tituloPrincipal {
   display: none;
+  z-index: 1;
   font-family: fredoka;
   font-size: 20px;
-  background-image: linear-gradient(180deg, aqua, transparent);
   grid-column: 1/4;
   grid-row: 1/2;
   text-align: start;
@@ -46,18 +46,21 @@
   }
 }
 @media (max-width:425px) {
-  .tituloPrincipal {
-    display: block !important;
+  .grillaPrincipal .tituloPrincipal {
+    display: block;
+    text-align: center;
+    font-size: 45px;
+    z-index: 2;
   }
 }
 @media (max-width:375px) {
-  .tituloPrincipal {
-    font-size: 22px !important;
+  .grillaPrincipal .tituloPrincipal {
+    font-size: 45px;
   }
 }
 @media (max-width:320px) {
   .tituloPrincipal {
-    font-size: 21px !important;
+    font-size: 30px;
   }
 }
 .navIni .navegadorEnlaces > ul > li {
@@ -98,6 +101,10 @@
 .navIni .navegadorEnlaces .fa-bars {
   font-size: 30px;
   font-weight: bolder;
+  font-size: 50px;
+  margin: 10px;
+}
+.navIni .navegadorEnlaces label, .navIni .navegadorEnlaces input {
   display: none;
 }
 .navIni .navegadorEnlaces > ul {
@@ -182,34 +189,37 @@
 }
 @media (max-width:768px) {
   .navIni {
-    background-image: none;
     grid-column: 1/4;
     justify-content: end;
+    width: 768px;
+  }
+  .navIni .navegadorEnlaces {
+    z-index: 3;
+  }
+  .navIni .navegadorEnlaces > input:checked + ul {
+    max-height: 350px;
   }
   .navIni .navegadorEnlaces ul {
-    position: relative;
-    right: 770px;
+    flex-direction: column;
+    max-height: 0px;
+    overflow: hidden;
   }
-  .navIni .navegadorEnlaces .fa-bars {
+  .navIni .navegadorEnlaces label {
     justify-content: end;
     text-align: end;
-    z-index: 1;
-    font-size: 50px;
-    margin: 10px;
+    z-index: 2;
     font-weight: bolder;
     display: block;
   }
-  .navIni .navegadorEnlaces .fa-bars:hover + ul {
+  .navIni .navegadorEnlaces label:hover + ul {
     z-index: 1;
-    position: relative;
+    position: absolute;
     right: 0px;
     background-color: aquamarine;
-  }
-  .navIni .navegadorEnlaces > ul {
-    flex-direction: column;
+    transition: 1s;
   }
   .navIni .navegadorEnlaces > ul > li {
-    margin: 1px;
+    margin: 10px 0px;
     padding: 1px;
   }
   .navIni .navegadorEnlaces > ul > li > a {
@@ -217,12 +227,12 @@
   }
   .navIni .botonesInicio {
     display: flex;
-    flex-direction: column;
-    margin: 15px;
+    margin: 15px auto;
     top: 413px;
+    left: 200px;
   }
   .navIni .botonesInicio > button {
-    margin: 10px;
+    margin: 10px 30px;
   }
   .navIni .botonesInicio > button > a {
     font-size: 30px;
@@ -231,11 +241,17 @@
     display: none;
   }
 }
+@media (max-width:425px) {
+  label {
+    z-index: 2;
+  }
+}
 .logoInicio {
   grid-column: 1/4;
   grid-row: 2/3;
   justify-items: center;
   margin: 0px auto;
+  position: relative;
 }
 .logoInicio > img {
   height: 90%;
@@ -246,7 +262,7 @@
   animation-iteration-count: infinite;
   animation-delay: 0s;
 }
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
   .logoInicio > img {
     height: 50%;
   }
@@ -277,27 +293,18 @@
 }
 @media (max-width:768px) {
   .logoInicio > img {
+    animation: none;
     height: 60%;
     margin: auto;
     width: auto;
     box-shadow: 15px 15px 15px black;
     border-radius: 20px;
-    animation-name: mologo;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-delay: 0s;
-  }
-}
-@keyframes mologo {
-  0% {
-    transform: translateY(-180px);
-  }
-  100% {
-    transform: translateY(-180px);
+    transform: translateY(-150px);
   }
 }
 @media (max-width:425px) {
-  .logoInicio > img {
+  .logoInicio .logoInicio > img {
+    z-index: 1;
     height: 40%;
     margin: auto;
     width: auto;
@@ -446,6 +453,7 @@
 @media (max-width:425px) {
   .sobrePie .upperFoot {
     background-color: rgb(255, 255, 255);
+    font-size: 30px;
   }
 }
 footer {
@@ -473,6 +481,36 @@ footer .pie .pie__2 {
   color: indigo;
 }
 
+@media (max-width:425px) {
+  footer {
+    grid-column: 1/4;
+    grid-row: 6/7;
+  }
+  footer .pie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    padding: 10px;
+    margin: 40px 0px 20px;
+    background-color: lavender;
+    border-radius: 10px;
+  }
+  footer .pie .pie__0 {
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 25px;
+  }
+  footer .pie .pie__1 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  footer .pie .pie__2 {
+    font-style: italic;
+    color: indigo;
+    font-size: 22px;
+  }
+}
 /*__________SERVICIOS__________*/
 .headServicios {
   grid-column: 1/4;
@@ -506,7 +544,6 @@ footer .pie .pie__2 {
 @media (max-width:1400px) {
   .headServicios .servicios .titServicios {
     font-size: 50px;
-    color: black;
   }
 }
 .headServicios .servicios .chat {
@@ -541,7 +578,7 @@ footer .pie .pie__2 {
 @media (max-width:1000px) {
   .headServicios {
     flex-wrap: wrap;
-    grid-column: 2/3;
+    grid-column: 1/4;
     grid-row: 2/3;
   }
   .headServicios .servicios {
@@ -551,8 +588,24 @@ footer .pie .pie__2 {
     align-items: center;
   }
   .headServicios .servicios .logoChico {
-    width: 100%;
-    transform: translateY(-100px);
+    width: 50%;
+    transform: translateY(-170px);
+  }
+}
+@media (max-width:1000px) and (max-width:425px) {
+  .headServicios .servicios .titServicios {
+    font-size: 90px;
+    color: indigo;
+    margin-bottom: 30px;
+  }
+  .headServicios .servicios .chat {
+    font-size: 35px;
+  }
+  .headServicios .servicios .chat > fieldset > input {
+    font-size: 25px;
+  }
+  .headServicios .servicios .chat > fieldset > a > button {
+    font-size: 35px;
   }
 }
 .serPri {
@@ -605,7 +658,7 @@ footer .pie .pie__2 {
 
 @media (max-width:1000px) {
   .serPri {
-    grid-column: 2/3;
+    grid-column: 1/4;
     grid-row: 3/4;
     flex-wrap: wrap;
   }
@@ -648,6 +701,7 @@ footer .pie .pie__2 {
   }
   .serPri .serviciosPrincipal .descServicios {
     text-align: center;
+    margin: 0%;
   }
 }
 /*__________PRODUCTOS__________*/
@@ -683,7 +737,6 @@ footer .pie .pie__2 {
 @media (max-width:1400px) {
   .headProd .productos .titProductos {
     font-size: 50px;
-    color: black;
   }
 }
 .headProd .productos .prod {
@@ -713,6 +766,8 @@ footer .pie .pie__2 {
 @media (max-width:1000px) {
   .headProd {
     flex-wrap: wrap;
+    grid-column: 1/4;
+    grid-row: 2/3;
     grid-column: 2/3;
     grid-row: 2/3;
   }
@@ -724,7 +779,7 @@ footer .pie .pie__2 {
   }
   .headProd .productos .logoChico {
     width: 100%;
-    transform: translateY(-100px);
+    transform: translateY(-170px);
   }
   .headProd .prod {
     width: 100% !important;
@@ -841,6 +896,40 @@ footer .pie .pie__2 {
   overflow: hidden;
 }
 
+@media (max-width:768px) {
+  .fotosProd {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    margin-top: 50px;
+    width: 80%;
+  }
+  .fotosProd .tarjProductos {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 10px 20px;
+    border: 3px solid;
+    border-radius: 20px;
+    border-color: darkgreen;
+    padding: 10px;
+    background-color: rgb(195, 231, 219);
+    box-shadow: 15px 15px 15px black;
+    transition: 2s;
+  }
+  .fotosProd .tarjProductos div {
+    background-blend-mode: lighten;
+    border-radius: 15px;
+    color: rgb(115, 15, 187);
+    font-family: fredoka;
+    font-weight: bolder;
+    text-shadow: 2px 2px white;
+    padding: 10px;
+    width: 80%;
+    height: 160px;
+    background-size: 100%;
+    overflow: hidden;
+  }
+}
 .busqueda {
   grid-column: 1/4;
   grid-row: 4/5;
@@ -850,7 +939,7 @@ footer .pie .pie__2 {
   padding: 20px;
   margin-left: 20px;
   font-size: 40px;
-  text-shadow: 5px 5px 5px black;
+  text-shadow: 15px 15px 15px black;
   color: coral;
   background-color: rgb(195, 231, 219);
   border-radius: 20px;
@@ -901,6 +990,44 @@ footer .pie .pie__2 {
   color: red;
 }
 
+@media (max-width:768px) {
+  .busqueda {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/4;
+    grid-row: 4/5;
+    flex-wrap: wrap;
+  }
+  .busqueda .busqProductos {
+    font-family: fredoka;
+    padding: 20px;
+    margin-left: 20px;
+    font-size: 50px;
+  }
+  .busqueda .specProductos ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin: auto;
+  }
+  .busqueda .specProductos ul > li {
+    list-style: none;
+    margin: 0px 30px;
+  }
+  .busqueda .specProductos ul > li > button {
+    padding: 10px;
+    font-size: 30px;
+  }
+  .busqueda .buscarProductos {
+    font-size: 40px;
+    font-style: oblique;
+    font-weight: bolder;
+    font-family: fredoka;
+    width: 40%;
+    padding: 15px;
+    margin: 6%;
+  }
+}
 /*__________DESTACADOS__________*/
 .headDestacados {
   grid-column: 1/4;

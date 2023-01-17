@@ -6,7 +6,7 @@
         padding: 20px;
         margin-left: 20px;
         font-size: 40px;
-        text-shadow: 5px 5px 5px black;
+        text-shadow: $sombra;
         color: $color2;
         background-color: $colorPrincipal;
         border-radius: 20px;
@@ -58,4 +58,44 @@
             color: red;
         }
     }
+}
+@media ($tablet){
+    .busqueda{
+        display: flex;
+        flex-direction: column;
+        grid-column: 1/4;
+        grid-row: 4/5;
+        flex-wrap: wrap;
+        .busqProductos{
+            font-family: fredoka;
+            padding: 20px;
+            margin-left: 20px;
+            font-size: 50px;
+        }
+        .specProductos{
+            ul{
+                display: flex;
+                flex-direction: column;
+                row-gap: 30px;
+                margin: auto;
+                > li{
+                    list-style: none;
+                    margin: 0px 30px;
+                    > button{
+                        padding: 10px;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .buscarProductos{
+            font-size: 40px;
+            font-style: oblique;
+            font-weight: bolder;
+            font-family: fredoka;
+            width: 40%;
+            padding: 15px;
+            margin: 6%;
+        }
+    } 
 }

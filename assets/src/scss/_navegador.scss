@@ -28,6 +28,10 @@
         .fa-bars{
             font-size: 30px;
             font-weight: bolder;
+            font-size: 50px;
+            margin: 10px;
+        }
+        label ,input{
             display: none;
         }
         > ul{
@@ -120,33 +124,36 @@
 }
 @media ($tablet){
     .navIni{
-        background-image: none;
         grid-column: 1/4;
         justify-content: end;
+        width: 768px;
         .navegadorEnlaces{
-            ul{
-                position: relative;
-                right: 770px;
+            z-index: 3;
+            > input:checked + ul{
+                max-height: 350px;
             }
-            .fa-bars{
+            ul{
+                flex-direction: column;
+                max-height: 0px;
+                overflow: hidden;
+            }
+            label{
                 justify-content: end;
                 text-align: end;
-                z-index: 1;
-                font-size: 50px;
-                margin: 10px;
+                z-index: 2;
                 font-weight: bolder;
                 display: block;
                 &:hover + ul{
                     z-index: 1;
-                    position: relative;
+                    position: absolute;
                     right: 0px;
                     background-color: aquamarine;
+                    transition: 1s;
                 }
             }
             > ul{
-                flex-direction: column;
                 > li{
-                    margin: 1px;
+                    margin: 10px 0px;
                     padding: 1px;
                     > a{
                         font-size: 30px;
@@ -156,11 +163,11 @@
         }
         .botonesInicio{
             display: flex;
-            flex-direction: column;
-            margin:15px;
+            margin:15px auto;
             top: 413px;
+            left: 200px;
             > button{
-                margin: 10px;
+                margin: 10px 30px;
                 > a{
                     font-size: 30px;
                 }
@@ -169,5 +176,10 @@
         .visitenos{
             display: none;
         }
+    }
+}
+@media ($cel-g){
+    label{
+        z-index: 2;
     }
 }

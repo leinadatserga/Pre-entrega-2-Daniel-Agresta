@@ -19,7 +19,6 @@
         @media ($portatil-g){
             .titServicios{
                 font-size: 50px;
-                color: black;
             }
         }
         .chat{
@@ -65,12 +64,33 @@
             row-gap: 20px;
             align-items: center;
             .logoChico{
-                width: 100%;
-                transform: translateY(-100px);
+                width: 50%;
+                transform: translateY(-170px);
             }
         }
-        grid-column: 2/3;
+        grid-column: 1/4;
         grid-row: 2/3;
+}
+@media ($cel-g){
+    .headServicios{
+        .servicios{
+            .titServicios{
+                font-size: 90px;
+                color: $color1;
+                margin-bottom: 30px;
+            }
+            .chat{
+                font-size: 35px;
+                > fieldset{
+                    > input{
+                        font-size: 25px;
+                    }
+                    > a > button{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
     }
-    
+}   
 }

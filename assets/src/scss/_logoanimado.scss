@@ -3,6 +3,7 @@
     grid-row: 2/3;
     justify-items: center;
     margin: 0px auto;
+    position: relative;
     > img{
         height: 90%;
         box-shadow: $sombra;
@@ -12,7 +13,7 @@
         animation-iteration-count: infinite;
         animation-delay: 0s;
     }
-    @media (max-width:1000px){
+    @media ($portatil-c){
         > img{
             height: 50%;
         } 
@@ -27,26 +28,23 @@
 }
 @media ($tablet){
     > img{
+        animation: none;
         height: 60%;
         margin: auto;
         width: auto;
         box-shadow: $sombra;
         border-radius: 20px;
-        animation-name: mologo;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        animation-delay: 0s;
+        transform: translateY(-150px);
     }
 }
-@keyframes mologo{
-        0%{transform: translateY(-180px);}
-        100%{transform: translateY(-180px);}
-}
 @media ($cel-g){
-    > img{
-        height: 40%;
-        margin: auto;
-        width: auto;
-    } 
+    .logoInicio{
+        > img{
+            z-index: 1;
+            height: 40%;
+            margin: auto;
+            width: auto;
+        }
+    }
 }
 }
