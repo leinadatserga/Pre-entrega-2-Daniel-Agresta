@@ -768,8 +768,6 @@ footer .pie .pie__2 {
     flex-wrap: wrap;
     grid-column: 1/4;
     grid-row: 2/3;
-    grid-column: 2/3;
-    grid-row: 2/3;
   }
   .headProd .productos {
     flex-direction: column;
@@ -778,12 +776,16 @@ footer .pie .pie__2 {
     align-items: center;
   }
   .headProd .productos .logoChico {
-    width: 100%;
+    width: 50%;
     transform: translateY(-170px);
   }
-  .headProd .prod {
-    width: 100% !important;
-    margin: 0px;
+}
+@media (max-width:768px) {
+  .headProd .productos .titProductos {
+    margin-top: 30px;
+  }
+  .headProd .productos .prod {
+    width: 90%;
     border: 3px solid;
     border-radius: 9px;
     border-color: darkgreen;
@@ -793,20 +795,11 @@ footer .pie .pie__2 {
     background-color: rgb(195, 231, 219);
     box-shadow: 15px 15px 15px black;
   }
-  .headProd .prod > fieldset {
-    width: 100%;
+  .headProd .productos .prod > fieldset {
+    font-size: 28px;
   }
-  .headProd .prod > fieldset > ol > li {
-    padding: 10px;
-    margin-left: 36px;
-  }
-  .headProd .prod > fieldset > ol > li > a {
-    text-decoration: none;
-    list-style-type: none;
-  }
-  .headProd .prod > fieldset > ol > li > a:hover {
-    color: black;
-    font-style: oblique;
+  .headProd .productos .prod > fieldset > ol {
+    font-size: 25px;
   }
 }
 .fotosProd {
@@ -922,6 +915,7 @@ footer .pie .pie__2 {
     color: rgb(115, 15, 187);
     font-family: fredoka;
     font-weight: bolder;
+    font-size: 30px;
     text-shadow: 2px 2px white;
     padding: 10px;
     width: 80%;
@@ -1084,6 +1078,50 @@ footer .pie .pie__2 {
   border-radius: 10px;
 }
 
+@media (max-width:1400px) {
+  .headDestacados .destacados .titDestacados {
+    font-size: 50px;
+  }
+  .headDestacados .destacados .ingCliente > form {
+    width: min-content;
+  }
+  .headDestacados .destacados .ingCliente > form > fieldset {
+    width: 260px;
+  }
+}
+@media (max-width:1000px) {
+  .headDestacados {
+    flex-wrap: wrap;
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+  .headDestacados .destacados {
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .headDestacados .destacados .logoChico {
+    width: 50%;
+    transform: translateY(-170px);
+  }
+}
+@media (max-width:425px) {
+  .headDestacados .destacados .titDestacados {
+    font-size: 90px;
+    color: indigo;
+    margin-bottom: 30px;
+  }
+  .headDestacados .destacados .ingCliente > form > fieldset {
+    font-size: 35px;
+  }
+  .headDestacados .destacados .ingCliente > form > fieldset > input {
+    font-size: 25px;
+  }
+  .headDestacados .destacados .ingCliente > form > fieldset > a > button {
+    font-size: 35px;
+  }
+}
 .canalNovedades {
   grid-column: 1/4;
   grid-row: 3/4;

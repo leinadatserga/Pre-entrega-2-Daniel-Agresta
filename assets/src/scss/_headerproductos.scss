@@ -58,42 +58,37 @@
             row-gap: 20px;
             align-items: center;
             .logoChico{
-                width: 100%;
+                width: 50%;
                 transform: translateY(-170px);
             }
         }
         grid-column: 1/4;
         grid-row: 2/3;
-        .prod{
-            width: 100% !important;
-            margin: 0px;
-            border: 3px solid;
-            border-radius: 9px;
-            border-color: darkgreen;
-            font-family: fredoka;
-            color: $color1;
-            padding: 5px;
-            background-color: $colorPrincipal;
-            box-shadow: $sombra;
-            > fieldset{
-                width: 100%;
-                > ol{
-                    > li{
-                        >a{
-                            text-decoration: none;
-                            list-style-type: none;
-                            &:hover{
-                                color: black;
-                                font-style: oblique;
-                            }
-                        }
-                    padding: 10px;
-                    margin-left: 36px;
+}
+}
+@media ($tablet){
+    .headProd{
+        .productos{
+            .titProductos{
+                margin-top: 30px;
+            }
+            .prod{
+                width: 90%;
+                border: 3px solid;
+                border-radius: 9px;
+                border-color: darkgreen;
+                font-family: fredoka;
+                color: $color1;
+                padding: 5px;
+                background-color: $colorPrincipal;
+                box-shadow: $sombra;
+                > fieldset{
+                    font-size: 28px;
+                    > ol{
+                       font-size: 25px; 
                     }
-                }
-            }  
+                }  
+            }
         }
-        grid-column: 2/3;
-        grid-row: 2/3;
     }
 }

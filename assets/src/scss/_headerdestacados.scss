@@ -10,7 +10,7 @@
         .logoChico{
             width: 25%;
             height: 25%;
-            box-shadow: 15px 15px 15px black;
+            box-shadow: $sombra;
         }
         .titDestacados{
             @include titulos(90px, $color2, $color1)
@@ -37,6 +37,64 @@
                             padding: 8px;
                             border: 3px solid;
                         border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media ($portatil-g){
+    .headDestacados{
+        .destacados{
+            .titDestacados{
+                font-size: 50px;
+            }
+            .ingCliente{
+                > form{
+                    width: min-content;
+                    > fieldset{
+                        width: 260px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media ($portatil-c){
+    .headDestacados{
+        flex-wrap: wrap;
+        .destacados{
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            align-items: center;
+            .logoChico{
+                width: 50%;
+                transform: translateY(-170px);
+            }
+        }
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+}
+@media ($cel-g){
+    .headDestacados{
+        .destacados{
+            .titDestacados{
+                font-size: 90px;
+                color: $color1;
+                margin-bottom: 30px;
+            }
+            .ingCliente{
+                > form{
+                    > fieldset{
+                        font-size: 35px;
+                        > input{
+                            font-size: 25px;
+                        }
+                        > a > button{
+                            font-size: 35px;
                         }
                     }
                 }

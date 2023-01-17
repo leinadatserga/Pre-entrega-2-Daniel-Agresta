@@ -13,8 +13,7 @@
             box-shadow: $sombra;
         }
         .titServicios{
-            @include titulos(90px, $color2, $color1)
-            
+            @include titulos(90px, $color2, $color1)   
         }
         @media ($portatil-g){
             .titServicios{
