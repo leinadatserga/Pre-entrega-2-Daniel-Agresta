@@ -1,10 +1,12 @@
 @import "variables";
+@import "mixin";
 @import "reset";
 @import "fuentes";
 
 /*__________INICIO__________*/
 
 @import "grilla";
+@import "extend";
 @import "navegador";
 @import "logoanimado";
 @import "principal";

@@ -45,7 +45,7 @@
         color: brown;
         text-align: center;
     }
-    @media (max-width:1000px){
+    @media ($portatil-c){
         .publicidad__pub1{
             font-size: 40px;
             padding: 10px;
@@ -62,5 +62,11 @@
             padding: 10px;
             font-size: 20px;
         }   
-}
+    }
+    @media ($cel-g){
+        .publicidad__pub1{
+            font-size: 34px;
+            padding: 5px;
+        }  
+    }
 }

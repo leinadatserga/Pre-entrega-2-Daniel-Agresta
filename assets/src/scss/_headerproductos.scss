@@ -1,4 +1,4 @@
-.listaProd{
+.headProd{
     grid-column: 1/4;
     grid-row: 2/3;
     .productos{
@@ -10,19 +10,16 @@
         .logoChico{
             width: 25%;
             height: 25%;
-            box-shadow: $sombra;;
+            box-shadow: $sombra;
         }
         .titProductos{
-            font-size: 90px;
-            font-weight: bolder;
-            font-family: fredoka; color: $color1;
-            padding: 10px;
-            border: 18px solid;
-            border-style: double;
-            border-color: $color2;
-            background-color: $colorPrincipal;
-            border-radius: 28px;
-            box-shadow: $sombra;
+            @include titulos(90px, $color2, $color1)
+        }
+        @media ($portatil-g){
+            .titProductos{
+                font-size: 50px;
+                color: black;
+            }
         }
         .prod{
             width: 20%;
@@ -51,5 +48,51 @@
                 }
             }  
         }
+    }
+}
+@media ($portatil-c){
+    .headProd{
+        flex-wrap: wrap;
+        .productos{
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            align-items: center;
+            .logoChico{
+                width: 100%;
+                transform: translateY(-100px);
+            }
+        }
+        .prod{
+            width: 100% !important;
+            margin: 0px;
+            border: 3px solid;
+            border-radius: 9px;
+            border-color: darkgreen;
+            font-family: fredoka;
+            color: $color1;
+            padding: 5px;
+            background-color: $colorPrincipal;
+            box-shadow: $sombra;
+            > fieldset{
+                width: 100%;
+                > ol{
+                    > li{
+                        >a{
+                            text-decoration: none;
+                            list-style-type: none;
+                            &:hover{
+                                color: black;
+                                font-style: oblique;
+                            }
+                        }
+                    padding: 10px;
+                    margin-left: 36px;
+                    }
+                }
+            }  
+        }
+        grid-column: 2/3;
+        grid-row: 2/3;
     }
 }

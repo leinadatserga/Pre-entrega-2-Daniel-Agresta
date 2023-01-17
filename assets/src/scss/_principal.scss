@@ -10,17 +10,31 @@
             width: 20%;
             box-shadow: $sombra;
         }
-        @media (max-width:1000px){
-            .fotosSeguridad{
-                margin-top: 8%;
-                display: flex;
-                justify-content: space-around;
-                padding: 10px;
-                > img{
-                    
-                    box-shadow: $sombra;
-                }
-            }
+    }
+@media ($portatil-c){
+    .fotosSeguridad{
+        margin-top: 8%;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        > img{
+            width: 30%;
+            box-shadow: $sombra;
         }
     }
+}
+@media ($tablet){
+    .fotosSeguridad{
+        margin: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        > img{
+            width: 50%;
+            box-shadow: $sombra;
+            margin-bottom: 25px;
+        }
+    }
+}
 }

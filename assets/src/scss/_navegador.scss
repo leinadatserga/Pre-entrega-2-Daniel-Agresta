@@ -35,11 +35,7 @@
             list-style-type: none;
             margin: 15px;
             > li{
-                border: 3px solid;
-                border-radius: 7px;
-                border-color: $color1;
-                background-color: $color2;
-                margin: 0px 10px;
+                @extend %boton;
                 &:hover{
                 transform: scale(1.25);
                 box-shadow: 4px 4px 8px;
@@ -61,6 +57,7 @@
             margin: 15px;
             font-size: 25px;
             font-family: fredoka;
+            color: $color1;
         }
         > img{
             width: 50%;
@@ -70,7 +67,7 @@
         }
     }
 }
-@media (max-width:1400px){
+@media ($portatil-g){
     .navIni{  
         width: 100%;
         .botonesInicio{
@@ -103,25 +100,34 @@
             }
         }
         .visitenos{
-            position: absolute;
-            top: 57px;
-            left: 500px;
-            z-index: 2;
+            position: relative;
+            top: 14px;
+            right:-70%;
             >h3{
                 font-size: 20px;
                 margin: 5px;
             }
         }
-    }
-    
+        
+    } 
 }
-@media (max-width:768px){
+@media ($portatil-c){
+    .navIni{
+        .visitenos{
+        display: none;
+        }
+    }
+}
+@media ($tablet){
     .navIni{
         background-image: none;
-        grid-column: 2/4;
+        grid-column: 1/4;
         justify-content: end;
         .navegadorEnlaces{
-            z-index: 3;
+            ul{
+                position: relative;
+                right: 770px;
+            }
             .fa-bars{
                 justify-content: end;
                 text-align: end;
@@ -130,12 +136,18 @@
                 margin: 10px;
                 font-weight: bolder;
                 display: block;
+                &:hover + ul{
+                    z-index: 1;
+                    position: relative;
+                    right: 0px;
+                    background-color: aquamarine;
+                }
             }
             > ul{
                 flex-direction: column;
                 > li{
-                    margin: 10px;
-                    padding: 5px;
+                    margin: 1px;
+                    padding: 1px;
                     > a{
                         font-size: 30px;
                     }

@@ -1,0 +1,13 @@
+@mixin titulos($tamaño, $colorborde, $colorfuente){
+    font-size: $tamaño;
+    font-weight: bolder;
+    font-family: fredoka;
+    color: $colorfuente;
+    padding: 10px;
+    border: 18px solid;
+    border-style: double;
+    border-color: $colorborde;
+    background-color: $colorPrincipal;
+    border-radius: 28px;
+    box-shadow: $sombra;
+}

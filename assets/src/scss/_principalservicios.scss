@@ -49,3 +49,50 @@
         }
     }
 }
+@media ($portatil-c){
+    .serPri{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        flex-wrap: wrap;
+        .serviciosPrincipal{
+            flex-direction: column;
+            .listServicios{
+                margin-bottom: 50px;
+                > li{
+                    text-align: center;
+                    margin: 20px auto;
+                    width: min-content;
+                    border-radius: 16px;
+                    box-shadow: 15px 15px 15px black;
+                    list-style: none;
+                    padding: 20px;
+                    font-family: fredoka;
+                    font-size: 30px;
+                    color: $color1;
+                    background-color: $colorPrincipal;
+                    border-radius: 16px;
+                }
+            }
+            .imgServicios{
+                justify-items: center;
+                > img{
+                    width: 30%;
+                    margin: 1%;
+                    padding: 5px;
+                    border: 14px solid;
+                    border-radius: 10px;
+                    border-color: $color2;
+                    border-style: double;
+                    box-shadow: $sombra;
+                    transition: 2s;
+                    &:hover{
+                        transform: scale(2.5);
+                    }
+                }
+            }
+            .descServicios{
+                text-align: center;
+            }
+        }
+    }
+}

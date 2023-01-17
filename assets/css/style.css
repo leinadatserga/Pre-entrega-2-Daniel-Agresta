@@ -20,14 +20,54 @@
   grid-template-rows: 280px 440px 400px 600px 200px 100px;
   gap: 0px 15px;
 }
+.grillaPrincipal .tituloPrincipal {
+  display: none;
+  font-family: fredoka;
+  font-size: 20px;
+  background-image: linear-gradient(180deg, aqua, transparent);
+  grid-column: 1/4;
+  grid-row: 1/2;
+  text-align: start;
+  padding: 10px;
+}
 
-@media (max-width: 1400px) {
+@media (max-width:1400px) {
   .grillaPrincipal {
     display: grid;
     grid-template-rows: 250px 440px 400px 700px 200px 100px;
     align-content: center;
   }
 }
+@media (max-width:1000px) {
+  .grillaPrincipal {
+    display: grid;
+    grid-template-rows: 250px auto auto 700px auto auto;
+    align-content: center;
+  }
+}
+@media (max-width:425px) {
+  .tituloPrincipal {
+    display: block !important;
+  }
+}
+@media (max-width:375px) {
+  .tituloPrincipal {
+    font-size: 22px !important;
+  }
+}
+@media (max-width:320px) {
+  .tituloPrincipal {
+    font-size: 21px !important;
+  }
+}
+.navIni .navegadorEnlaces > ul > li {
+  border: 3px solid;
+  border-radius: 7px;
+  border-color: indigo;
+  background-color: coral;
+  margin: 0px 10px;
+}
+
 .navIni {
   grid-column: 1/4;
   grid-row: 1/2;
@@ -65,13 +105,6 @@
   list-style-type: none;
   margin: 15px;
 }
-.navIni .navegadorEnlaces > ul > li {
-  border: 3px solid;
-  border-radius: 7px;
-  border-color: indigo;
-  background-color: coral;
-  margin: 0px 10px;
-}
 .navIni .navegadorEnlaces > ul > li:hover {
   transform: scale(1.25);
   box-shadow: 4px 4px 8px;
@@ -90,6 +123,7 @@
   margin: 15px;
   font-size: 25px;
   font-family: fredoka;
+  color: indigo;
 }
 .navIni .visitenos > img {
   width: 50%;
@@ -98,7 +132,7 @@
   justify-self: center;
 }
 
-@media (max-width: 1400px) {
+@media (max-width:1400px) {
   .navIni {
     width: 100%;
   }
@@ -132,24 +166,29 @@
     font-size: 20px;
   }
   .navIni .visitenos {
-    position: absolute;
-    top: 57px;
-    left: 500px;
-    z-index: 2;
+    position: relative;
+    top: 14px;
+    right: -70%;
   }
   .navIni .visitenos > h3 {
     font-size: 20px;
     margin: 5px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width:1000px) {
+  .navIni .visitenos {
+    display: none;
+  }
+}
+@media (max-width:768px) {
   .navIni {
     background-image: none;
-    grid-column: 2/4;
+    grid-column: 1/4;
     justify-content: end;
   }
-  .navIni .navegadorEnlaces {
-    z-index: 3;
+  .navIni .navegadorEnlaces ul {
+    position: relative;
+    right: 770px;
   }
   .navIni .navegadorEnlaces .fa-bars {
     justify-content: end;
@@ -160,12 +199,18 @@
     font-weight: bolder;
     display: block;
   }
+  .navIni .navegadorEnlaces .fa-bars:hover + ul {
+    z-index: 1;
+    position: relative;
+    right: 0px;
+    background-color: aquamarine;
+  }
   .navIni .navegadorEnlaces > ul {
     flex-direction: column;
   }
   .navIni .navegadorEnlaces > ul > li {
-    margin: 10px;
-    padding: 5px;
+    margin: 1px;
+    padding: 1px;
   }
   .navIni .navegadorEnlaces > ul > li > a {
     font-size: 30px;
@@ -187,13 +232,13 @@
   }
 }
 .logoInicio {
-  grid-column: 2/3;
+  grid-column: 1/4;
   grid-row: 2/3;
   justify-items: center;
   margin: 0px auto;
 }
 .logoInicio > img {
-  height: 100%;
+  height: 90%;
   box-shadow: 15px 15px 15px black;
   border-radius: 20px;
   animation-name: movlogo;
@@ -203,7 +248,7 @@
 }
 @media (max-width: 1000px) {
   .logoInicio > img {
-    height: 80%;
+    height: 50%;
   }
 }
 @keyframes movlogo {
@@ -230,10 +275,11 @@
     transform: scale(1.05);
   }
 }
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .logoInicio > img {
-    height: 90%;
-    opacity: 60%;
+    height: 60%;
+    margin: auto;
+    width: auto;
     box-shadow: 15px 15px 15px black;
     border-radius: 20px;
     animation-name: mologo;
@@ -248,6 +294,13 @@
   }
   100% {
     transform: translateY(-180px);
+  }
+}
+@media (max-width:425px) {
+  .logoInicio > img {
+    height: 40%;
+    margin: auto;
+    width: auto;
   }
 }
 
@@ -265,15 +318,30 @@
   width: 20%;
   box-shadow: 15px 15px 15px black;
 }
-@media (max-width: 1000px) {
-  .principal .fotosSeguridad .fotosSeguridad {
+@media (max-width:1000px) {
+  .principal .fotosSeguridad {
     margin-top: 8%;
     display: flex;
     justify-content: space-around;
     padding: 10px;
   }
-  .principal .fotosSeguridad .fotosSeguridad > img {
+  .principal .fotosSeguridad > img {
+    width: 30%;
     box-shadow: 15px 15px 15px black;
+  }
+}
+@media (max-width:768px) {
+  .principal .fotosSeguridad {
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .principal .fotosSeguridad > img {
+    width: 50%;
+    box-shadow: 15px 15px 15px black;
+    margin-bottom: 25px;
   }
 }
 
@@ -325,7 +393,7 @@
   color: brown;
   text-align: center;
 }
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
   .publicidad .publicidad__pub1 {
     font-size: 40px;
     padding: 10px;
@@ -341,6 +409,12 @@
   .publicidad .publicidad__pub4 {
     padding: 10px;
     font-size: 20px;
+  }
+}
+@media (max-width:425px) {
+  .publicidad .publicidad__pub1 {
+    font-size: 34px;
+    padding: 5px;
   }
 }
 
@@ -369,6 +443,11 @@
   padding: 6px;
 }
 
+@media (max-width:425px) {
+  .sobrePie .upperFoot {
+    background-color: rgb(255, 255, 255);
+  }
+}
 footer {
   grid-column: 1/4;
   grid-row: 6/7;
@@ -395,20 +474,16 @@ footer .pie .pie__2 {
 }
 
 /*__________SERVICIOS__________*/
-@media (max-width: 1400px) {
-  .titServicios {
-    font-size: 50px;
-    color: black;
-  }
-}
 .headServicios {
   grid-column: 1/4;
   grid-row: 2/3;
 }
 .headServicios .servicios {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 20px 25px;
+  align-items: flex-start;
+  padding: 20px 60px;
 }
 .headServicios .servicios .logoChico {
   width: 25%;
@@ -416,7 +491,6 @@ footer .pie .pie__2 {
   box-shadow: 15px 15px 15px black;
 }
 .headServicios .servicios .titServicios {
-  height: min-content;
   font-size: 90px;
   font-weight: bolder;
   font-family: fredoka;
@@ -429,7 +503,7 @@ footer .pie .pie__2 {
   border-radius: 28px;
   box-shadow: 15px 15px 15px black;
 }
-@media (max-width: 1400px) {
+@media (max-width:1400px) {
   .headServicios .servicios .titServicios {
     font-size: 50px;
     color: black;
@@ -463,13 +537,24 @@ footer .pie .pie__2 {
   border-radius: 5px;
   background-color: rgb(195, 231, 219);
 }
-@media (max-width: 1400px) {
-  .headServicios .titServicios {
-    font-size: 50px;
-    color: black;
+
+@media (max-width:1000px) {
+  .headServicios {
+    flex-wrap: wrap;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .headServicios .servicios {
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .headServicios .servicios .logoChico {
+    width: 100%;
+    transform: translateY(-100px);
   }
 }
-
 .serPri {
   grid-column: 1/4;
   grid-row: 3/4;
@@ -518,24 +603,71 @@ footer .pie .pie__2 {
   box-shadow: 15px 15px 15px black;
 }
 
+@media (max-width:1000px) {
+  .serPri {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    flex-wrap: wrap;
+  }
+  .serPri .serviciosPrincipal {
+    flex-direction: column;
+  }
+  .serPri .serviciosPrincipal .listServicios {
+    margin-bottom: 50px;
+  }
+  .serPri .serviciosPrincipal .listServicios > li {
+    text-align: center;
+    margin: 20px auto;
+    width: min-content;
+    border-radius: 16px;
+    box-shadow: 15px 15px 15px black;
+    list-style: none;
+    padding: 20px;
+    font-family: fredoka;
+    font-size: 30px;
+    color: indigo;
+    background-color: rgb(195, 231, 219);
+    border-radius: 16px;
+  }
+  .serPri .serviciosPrincipal .imgServicios {
+    justify-items: center;
+  }
+  .serPri .serviciosPrincipal .imgServicios > img {
+    width: 30%;
+    margin: 1%;
+    padding: 5px;
+    border: 14px solid;
+    border-radius: 10px;
+    border-color: coral;
+    border-style: double;
+    box-shadow: 15px 15px 15px black;
+    transition: 2s;
+  }
+  .serPri .serviciosPrincipal .imgServicios > img:hover {
+    transform: scale(2.5);
+  }
+  .serPri .serviciosPrincipal .descServicios {
+    text-align: center;
+  }
+}
 /*__________PRODUCTOS__________*/
-.listaProd {
+.headProd {
   grid-column: 1/4;
   grid-row: 2/3;
 }
-.listaProd .productos {
+.headProd .productos {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px 60px;
 }
-.listaProd .productos .logoChico {
+.headProd .productos .logoChico {
   width: 25%;
   height: 25%;
   box-shadow: 15px 15px 15px black;
 }
-.listaProd .productos .titProductos {
+.headProd .productos .titProductos {
   font-size: 90px;
   font-weight: bolder;
   font-family: fredoka;
@@ -548,7 +680,13 @@ footer .pie .pie__2 {
   border-radius: 28px;
   box-shadow: 15px 15px 15px black;
 }
-.listaProd .productos .prod {
+@media (max-width:1400px) {
+  .headProd .productos .titProductos {
+    font-size: 50px;
+    color: black;
+  }
+}
+.headProd .productos .prod {
   width: 20%;
   border: 3px solid;
   border-radius: 9px;
@@ -559,22 +697,67 @@ footer .pie .pie__2 {
   background-color: rgb(195, 231, 219);
   box-shadow: 15px 15px 15px black;
 }
-.listaProd .productos .prod > fieldset > ol > li {
+.headProd .productos .prod > fieldset > ol > li {
   padding: 10px;
   margin-left: 36px;
 }
-.listaProd .productos .prod > fieldset > ol > li > a {
+.headProd .productos .prod > fieldset > ol > li > a {
   text-decoration: none;
   list-style-type: none;
 }
-.listaProd .productos .prod > fieldset > ol > li > a:hover {
+.headProd .productos .prod > fieldset > ol > li > a:hover {
   color: black;
   font-style: oblique;
 }
 
+@media (max-width:1000px) {
+  .headProd {
+    flex-wrap: wrap;
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .headProd .productos {
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .headProd .productos .logoChico {
+    width: 100%;
+    transform: translateY(-100px);
+  }
+  .headProd .prod {
+    width: 100% !important;
+    margin: 0px;
+    border: 3px solid;
+    border-radius: 9px;
+    border-color: darkgreen;
+    font-family: fredoka;
+    color: indigo;
+    padding: 5px;
+    background-color: rgb(195, 231, 219);
+    box-shadow: 15px 15px 15px black;
+  }
+  .headProd .prod > fieldset {
+    width: 100%;
+  }
+  .headProd .prod > fieldset > ol > li {
+    padding: 10px;
+    margin-left: 36px;
+  }
+  .headProd .prod > fieldset > ol > li > a {
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .headProd .prod > fieldset > ol > li > a:hover {
+    color: black;
+    font-style: oblique;
+  }
+}
 .fotosProd {
   grid-column: 1/4;
   grid-row: 3/4;
+  margin-top: 50px;
 }
 .fotosProd .tarjProductos {
   display: flex;
@@ -671,7 +854,7 @@ footer .pie .pie__2 {
   color: coral;
   background-color: rgb(195, 231, 219);
   border-radius: 20px;
-  width: 30%;
+  width: max-content;
   box-shadow: 15px 15px 15px black;
 }
 .busqueda .specProductos ul {
@@ -687,7 +870,7 @@ footer .pie .pie__2 {
   font-size: 20px;
   font-weight: bolder;
   font-family: fredoka;
-  width: 300px;
+  width: max-content;
   border-radius: 15px;
   border: 3px solid;
   border-color: darkgreen;
@@ -719,23 +902,23 @@ footer .pie .pie__2 {
 }
 
 /*__________DESTACADOS__________*/
-.destacados {
+.headDestacados {
   grid-column: 1/4;
   grid-row: 2/3;
 }
-.destacados .destaque {
+.headDestacados .destacados {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px 60px;
 }
-.destacados .destaque .logoChico {
+.headDestacados .destacados .logoChico {
   width: 25%;
   height: 25%;
   box-shadow: 15px 15px 15px black;
 }
-.destacados .destaque .titDestacados {
+.headDestacados .destacados .titDestacados {
   font-size: 90px;
   font-weight: bolder;
   font-family: fredoka;
@@ -748,7 +931,7 @@ footer .pie .pie__2 {
   border-radius: 28px;
   box-shadow: 15px 15px 15px black;
 }
-.destacados .destaque .ingCliente > form {
+.headDestacados .destacados .ingCliente > form {
   font-family: fredoka;
   color: coral;
   width: 400px;
@@ -757,18 +940,18 @@ footer .pie .pie__2 {
   background-color: rgb(195, 231, 219);
   padding: 10px;
 }
-.destacados .destaque .ingCliente > form legend {
+.headDestacados .destacados .ingCliente > form legend {
   color: indigo;
 }
-.destacados .destaque .ingCliente > form label {
+.headDestacados .destacados .ingCliente > form label {
   padding: 20px;
 }
-.destacados .destaque .ingCliente > form label .ingreso {
+.headDestacados .destacados .ingCliente > form label .ingreso {
   font-family: fredoka;
   color: indigo;
   padding: 9px;
 }
-.destacados .destaque .ingCliente > form label .ingreso:hover {
+.headDestacados .destacados .ingCliente > form label .ingreso:hover {
   padding: 8px;
   border: 3px solid;
   border-radius: 10px;
