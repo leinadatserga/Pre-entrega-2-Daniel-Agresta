@@ -27,3 +27,53 @@
         }
     }
 }
+@media ($portatil-g){
+    .headContacto{
+        .contacto{
+            .titContacto{
+                font-size: 50px;
+            }
+            .mapa{
+                > fieldset{
+                    width: 260px;
+                }
+            }
+        }
+    }
+}
+@media ($portatil-c){
+    .headContacto{
+        flex-wrap: wrap;
+        .contacto{
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 20px;
+            align-items: center;
+            .logoChico{
+                width: 50%;
+                transform: translateY(-170px);
+            }
+        }
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+}
+@media ($cel-g){
+    .headContacto{
+        .contacto{
+            .titContacto{
+                font-size: 90px;
+                color: $color1;
+                margin-bottom: 30px;
+            }
+            .mapa{
+                > fieldset{
+                    font-size: 35px;   
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,102 @@
+.mensaje{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    .areaMensaje{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        > fieldset{
+            > legend{
+                color: $color1;
+                padding-top: 20px;
+            }
+            padding: 10px;
+            font-family: fredoka;
+            font-size: 16px;
+            color: $color1;
+            font-family: fredoka;
+            color: $color2;
+            width: 30%; 
+            border: 6px solid;
+            border-radius: 16px;
+            background-color: $colorPrincipal;
+            padding: 15px;
+            box-shadow: $sombra;
+            > textarea{
+                font-family: fredoka;
+                width: 90%; 
+                border: 2px solid;
+                border-radius: 16px;
+                padding: 10px;
+            }
+            > input{
+                padding: 6px;
+                font-size: 16px;
+                font-weight: bolder;
+                font-style: oblique;
+                color: brown;
+                border: 2px solid;
+                border-radius: 10px;
+                margin: 5px;
+            }
+        }
+    } 
+}
+.enlaces{
+    padding: 25px;
+            font-family: fredoka;
+            font-size: 50px;
+            color: $color1;
+}
+.enlacesInteres{
+    .enlHorizontal{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        > li{
+            list-style: none;
+            > a{
+                text-decoration: none;
+                padding: 10px;
+                    font-size: 20px;
+                    font-weight: bolder;
+                    font-family: fredoka;
+                    width: max-content;
+                    border-radius: 15px;
+                    border: 3px solid;
+                    border-color: darkgreen;
+                    color: $color1;
+                    background-color: $colorPrincipal;
+                    box-shadow: $sombra;
+            }
+        }
+    }
+}
+@media ($tablet){
+    .enlacesInteres{
+        .enlHorizontal{
+            display: flex;
+            flex-direction: column;
+            row-gap: 60px;
+            align-items: center;
+            > li{
+                list-style: none;
+                > a{
+                    text-decoration: none;
+                    padding: 10px;
+                        font-size: 40px;
+                        font-weight: bolder;
+                        font-family: fredoka;
+                        width: max-content;
+                        border-radius: 15px;
+                        border: 3px solid;
+                        border-color: darkgreen;
+                        color: $color1;
+                        background-color: $colorPrincipal;
+                        box-shadow: $sombra;
+                }
+            }
+        }
+    }  
+}

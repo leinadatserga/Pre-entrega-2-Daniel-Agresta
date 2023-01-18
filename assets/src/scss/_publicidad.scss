@@ -44,29 +44,37 @@
         font-size: 25px;
         color: brown;
         text-align: center;
+    }   
+}
+@media ($portatil-c){
+    .publicidad__pub1{
+        font-size: 40px;
+        padding: 10px;
     }
-    @media ($portatil-c){
-        .publicidad__pub1{
-            font-size: 40px;
-            padding: 10px;
-        }
-        .publicidad__pub2{
-            padding: 10px;
-            font-size: 20px;
-        }
-        .publicidad__pub3{
-            padding: 10px;
-            font-size: 20px;
-        }
-        .publicidad__pub4{
-            padding: 10px;
-            font-size: 20px;
-        }   
+    .publicidad__pub2{
+        padding: 10px;
+        font-size: 20px;
     }
-    @media ($cel-g){
+    .publicidad__pub3{
+        padding: 10px;
+        font-size: 20px;
+    }
+    .publicidad__pub4{
+        padding: 10px;
+        font-size: 20px;
+    }   
+}
+@media ($cel-g){
+    .publicidad__pub1{
+        font-size: 50px;
+        padding: 5px;
+    }  
+}
+@media ($tablet){
+    .publicidad{
+        height: 60%;
         .publicidad__pub1{
-            font-size: 34px;
-            padding: 5px;
-        }  
+            font-size: 50px;
+        }
     }
 }

@@ -400,31 +400,39 @@
   color: brown;
   text-align: center;
 }
+
 @media (max-width:1000px) {
-  .publicidad .publicidad__pub1 {
+  .publicidad__pub1 {
     font-size: 40px;
     padding: 10px;
   }
-  .publicidad .publicidad__pub2 {
+  .publicidad__pub2 {
     padding: 10px;
     font-size: 20px;
   }
-  .publicidad .publicidad__pub3 {
+  .publicidad__pub3 {
     padding: 10px;
     font-size: 20px;
   }
-  .publicidad .publicidad__pub4 {
+  .publicidad__pub4 {
     padding: 10px;
     font-size: 20px;
   }
 }
 @media (max-width:425px) {
-  .publicidad .publicidad__pub1 {
-    font-size: 34px;
+  .publicidad__pub1 {
+    font-size: 50px;
     padding: 5px;
   }
 }
-
+@media (max-width:768px) {
+  .publicidad {
+    height: 60%;
+  }
+  .publicidad .publicidad__pub1 {
+    font-size: 50px;
+  }
+}
 .sobrePie {
   grid-column: 1/4;
   grid-row: 5/6;
@@ -1211,6 +1219,41 @@ footer .pie .pie__2 {
   box-shadow: 15px 15px 15px black;
 }
 
+@media (max-width:1400px) {
+  .headContacto .contacto .titContacto {
+    font-size: 50px;
+  }
+  .headContacto .contacto .mapa > fieldset {
+    width: 260px;
+  }
+}
+@media (max-width:1000px) {
+  .headContacto {
+    flex-wrap: wrap;
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+  .headContacto .contacto {
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .headContacto .contacto .logoChico {
+    width: 50%;
+    transform: translateY(-170px);
+  }
+}
+@media (max-width:425px) {
+  .headContacto .contacto .titContacto {
+    font-size: 90px;
+    color: indigo;
+    margin-bottom: 30px;
+  }
+  .headContacto .contacto .mapa > fieldset {
+    font-size: 35px;
+  }
+}
 .principalContacto {
   grid-column: 1/4;
   grid-row: 3/4;
@@ -1223,7 +1266,6 @@ footer .pie .pie__2 {
 }
 .principalContacto .formRegistro .registrese {
   padding: 25px;
-  margin: 40px 0px;
   font-family: fredoka;
   font-size: 50px;
   color: indigo;
@@ -1256,4 +1298,106 @@ footer .pie .pie__2 {
 }
 .principalContacto .formRegistro form {
   padding: 6px;
+}
+
+.mensaje {
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+.mensaje .areaMensaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mensaje .areaMensaje > fieldset {
+  padding: 10px;
+  font-family: fredoka;
+  font-size: 16px;
+  color: indigo;
+  font-family: fredoka;
+  color: coral;
+  width: 30%;
+  border: 6px solid;
+  border-radius: 16px;
+  background-color: rgb(195, 231, 219);
+  padding: 15px;
+  box-shadow: 15px 15px 15px black;
+}
+.mensaje .areaMensaje > fieldset > legend {
+  color: indigo;
+  padding-top: 20px;
+}
+.mensaje .areaMensaje > fieldset > textarea {
+  font-family: fredoka;
+  width: 90%;
+  border: 2px solid;
+  border-radius: 16px;
+  padding: 10px;
+}
+.mensaje .areaMensaje > fieldset > input {
+  padding: 6px;
+  font-size: 16px;
+  font-weight: bolder;
+  font-style: oblique;
+  color: brown;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.enlaces {
+  padding: 25px;
+  font-family: fredoka;
+  font-size: 50px;
+  color: indigo;
+}
+
+.enlacesInteres .enlHorizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.enlacesInteres .enlHorizontal > li {
+  list-style: none;
+}
+.enlacesInteres .enlHorizontal > li > a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: fredoka;
+  width: max-content;
+  border-radius: 15px;
+  border: 3px solid;
+  border-color: darkgreen;
+  color: indigo;
+  background-color: rgb(195, 231, 219);
+  box-shadow: 15px 15px 15px black;
+}
+
+@media (max-width:768px) {
+  .enlacesInteres .enlHorizontal {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    align-items: center;
+  }
+  .enlacesInteres .enlHorizontal > li {
+    list-style: none;
+  }
+  .enlacesInteres .enlHorizontal > li > a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: fredoka;
+    width: max-content;
+    border-radius: 15px;
+    border: 3px solid;
+    border-color: darkgreen;
+    color: indigo;
+    background-color: rgb(195, 231, 219);
+    box-shadow: 15px 15px 15px black;
+  }
 }
