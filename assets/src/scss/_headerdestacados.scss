@@ -78,6 +78,11 @@
         grid-row: 2/3;
     }
 }
+@media($tablet){
+    .titDestacados{
+        margin-top: 30px;
+    }
+}
 @media ($cel-g){
     .headDestacados{
         .destacados{
@@ -88,14 +93,32 @@
             }
             .ingCliente{
                 > form{
+                    width: 580px;
                     > fieldset{
-                        font-size: 35px;
-                        > input{
-                            font-size: 25px;
-                        }
-                        > a > button{
-                            font-size: 35px;
-                        }
+                        width: 90%;
+                        font-size: 40px;
+                        > label{
+                            font-size: 38px;
+                            > input{
+                                font-size: 25px;
+                            }
+                            .robot{
+                                transform: scale(2);
+                                border: 5px solid;
+                                margin: 15px;
+                            }
+                            .ingreso{
+                                font-family: fredoka;
+                                color: $color1;
+                                padding: 5px;
+                                font-size: 33px;
+                                &:hover{
+                                    padding: 8px;
+                                    border: 3px solid;
+                                border-radius: 10px;
+                                }
+                            }
+                        } 
                     }
                 }
             }

@@ -58,6 +58,11 @@
         grid-row: 2/3;
     }
 }
+@media($tablet){
+    .titContacto{
+        margin-top: 30px;
+    }
+}
 @media ($cel-g){
     .headContacto{
         .contacto{

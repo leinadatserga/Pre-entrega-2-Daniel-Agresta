@@ -92,3 +92,15 @@
         }
     }
 }
+@media ($cel-g){
+    .headProd{
+        .productos{
+            .titProductos{
+                font-size: 90px;
+                color: $color1;
+                margin-bottom: 30px;
+            }
+            
+        }
+    }
+}
