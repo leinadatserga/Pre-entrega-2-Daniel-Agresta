@@ -84,38 +84,134 @@
         }
     }
 }
-@media ($tablet){
+@media ($portatil-c){
     .fotosProd{
         grid-column: 1/4;
         grid-row: 3/4;
         margin-top: 50px;
-        width: 80%;
         .tarjProductos{
             display: flex;
-            flex-direction: column;
-            width: 400px;
-            margin: 10px 20px;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 30px 20px;
             border: 3px solid;
             border-radius: 20px;
             border-color: darkgreen;
             padding: 10px;
             background-color: $colorPrincipal;
-            box-shadow: $sombra;
+            box-shadow: 15px 15px 15px black;
             transition: 2s;
+            .tarjProductos__1{
+                background-image: url(../img/kit-alarma-residencial-dos-sensores-infrarrojo-y-un-magnetico-kit-alarma-residencial-dos-sensores-infrarrojo-y-un-magnetico.jpg);
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(0.98);
+                    border: 2px solid;   
+                }
+            }
+            .tarjProductos__2{
+                background-image: url(../img/Cerca\ Elétrica\ Intelbras\ 5002\ 100\ Mts\ Cabo\ Aço\ E\ Haste\ 1\,20.jpg);
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(0.98);
+                    border: 2px solid;   
+                }
+            }
+            .tarjProductos__3{
+                background-image: url(../img/Marcelo\ Pereto\ on\ Twitter.jpg);
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(0.98);
+                    border: 2px solid;   
+                }
+            }
+            .tarjProductos__4{
+                background-image: url(../img/Best\ UPS\ for\ Wi-fi\ Router.jpg);
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(0.98);
+                    border: 2px solid;   
+                }
+            }
+            .tarjProductos__5{
+                background-image: url(../img/Nvr\ Ip\ Hikvision\ 16\ Canais\ 4k\ Ds-7616ni-k2\ Sem\ Poe.jpg);
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(0.98);
+                    border: 2px solid;   
+                }
+            }
+            .tarjProductos__6{
+                background-image: url(../img/All\ You\ Need\ to\ Know\ to\ Buy\ a\ Security\ Camera\ System.png);
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(0.98);
+                    border: 2px solid;   
+                }
+            }
+            .tarjProductos__7{
+                background-image: url(../img/Kanlux\ 460\ Aler\ Jq-30-w\ Bewegungsmelder.jpg);
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(0.98);
+                    border: 2px solid;   
+                }
+            }
             div{
                 background-blend-mode:lighten;
                 border-radius: 15px;
                 color: rgb(115, 15, 187);
                 font-family: fredoka;
                 font-weight: bolder;
-                font-size: 30px;
                 text-shadow: 2px 2px white;
                 padding: 10px;
-                width: 80%;
-                height: 160px;
+                margin: 20px 0px;
+                width: 200px;
+                height: 180px;
                 background-size: 100%;
                 overflow: hidden;
             }
         }
     }
+}
+@media ($tablet){
+    .fotosProd{
+        grid-column: 1/4;
+        grid-row: 3/4;
+        margin: 50px auto;
+        width: 600px;
+        .tarjProductos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 25px;
+            width: 100%;
+            margin: 9px;
+            div{
+                width: 80%;
+                height: 400px;
+                font-size: 37px;
+            }
+        }
+    }
+}
+@media($cel-g){
+    .fotosProd{
+        grid-column: 1/4;
+        grid-row: 3/4;
+        margin-top: 50px;
+        width: 560px;
+        align-content: center;
+        .tarjProductos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 98%;
+            div{
+                font-size: 30px;
+                width: 70%;
+                height: 320px;
+            }
+        }
+    } 
 }

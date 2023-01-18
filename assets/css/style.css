@@ -325,42 +325,46 @@
   grid-row: 3/4;
 }
 .principal .fotosSeguridad {
-  margin-top: 8%;
+  margin-top: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px;
 }
 .principal .fotosSeguridad > img {
-  width: 20%;
+  width: 350px;
   box-shadow: 15px 15px 15px black;
+}
+
+@media (max-width:1400px) {
+  .principal .fotosSeguridad > img {
+    width: 300px;
+  }
 }
 @media (max-width:1000px) {
   .principal .fotosSeguridad {
-    margin-top: 8%;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
   }
   .principal .fotosSeguridad > img {
-    width: 30%;
+    width: 60%;
     box-shadow: 15px 15px 15px black;
   }
 }
 @media (max-width:768px) {
-  .principal .fotosSeguridad {
+  .fotosSeguridad {
     margin: 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
   }
-  .principal .fotosSeguridad > img {
+  .fotosSeguridad > img {
     width: 50%;
     box-shadow: 15px 15px 15px black;
     margin-bottom: 25px;
   }
 }
-
 .publicidad {
   height: 90%;
   font-family: fredoka;
@@ -411,19 +415,22 @@
 }
 
 @media (max-width:1000px) {
-  .publicidad__pub1 {
+  .publicidad {
+    height: 370px;
+  }
+  .publicidad .publicidad__pub1 {
     font-size: 40px;
     padding: 10px;
   }
-  .publicidad__pub2 {
+  .publicidad .publicidad__pub2 {
     padding: 10px;
     font-size: 20px;
   }
-  .publicidad__pub3 {
+  .publicidad .publicidad__pub3 {
     padding: 10px;
     font-size: 20px;
   }
-  .publicidad__pub4 {
+  .publicidad .publicidad__pub4 {
     padding: 10px;
     font-size: 20px;
   }
@@ -436,10 +443,10 @@
 }
 @media (max-width:768px) {
   .publicidad {
-    height: 60%;
+    height: 390px;
   }
   .publicidad .publicidad__pub1 {
-    font-size: 50px;
+    font-size: 45px;
   }
 }
 .sobrePie {
@@ -516,16 +523,16 @@ footer .pie .pie__2 {
   footer .pie .pie__0 {
     font-style: oblique;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 28px;
   }
   footer .pie .pie__1 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
   }
   footer .pie .pie__2 {
     font-style: italic;
     color: indigo;
-    font-size: 22px;
+    font-size: 26px;
   }
 }
 /*__________SERVICIOS__________*/
@@ -686,6 +693,7 @@ footer .pie .pie__2 {
   }
   .serPri .serviciosPrincipal {
     flex-direction: column;
+    align-items: center;
   }
   .serPri .serviciosPrincipal .listServicios {
     margin-bottom: 50px;
@@ -722,8 +730,9 @@ footer .pie .pie__2 {
     transform: scale(2.5);
   }
   .serPri .serviciosPrincipal .descServicios {
+    width: 90%;
     text-align: center;
-    margin: 0%;
+    margin: 50px 10px;
   }
 }
 /*__________PRODUCTOS__________*/
@@ -756,13 +765,8 @@ footer .pie .pie__2 {
   border-radius: 28px;
   box-shadow: 15px 15px 15px black;
 }
-@media (max-width:1400px) {
-  .headProd .productos .titProductos {
-    font-size: 50px;
-  }
-}
 .headProd .productos .prod {
-  width: 20%;
+  width: 60%;
   border: 3px solid;
   border-radius: 9px;
   border-color: darkgreen;
@@ -771,6 +775,9 @@ footer .pie .pie__2 {
   padding: 5px;
   background-color: rgb(195, 231, 219);
   box-shadow: 15px 15px 15px black;
+}
+.headProd .productos .prod > fieldset > ol {
+  list-style: none;
 }
 .headProd .productos .prod > fieldset > ol > li {
   padding: 10px;
@@ -785,21 +792,36 @@ footer .pie .pie__2 {
   font-style: oblique;
 }
 
-@media (max-width:1000px) {
-  .headProd {
-    flex-wrap: wrap;
-    grid-column: 1/4;
-    grid-row: 2/3;
+@media (max-width:1400px) {
+  .headProd .productos .titProductos {
+    font-size: 50px;
   }
+  .headProd .productos .prod {
+    width: 260px;
+  }
+}
+@media (max-width:1000px) {
   .headProd .productos {
     flex-direction: column;
-    flex-wrap: wrap;
     row-gap: 20px;
     align-items: center;
   }
   .headProd .productos .logoChico {
     width: 50%;
     transform: translateY(-170px);
+  }
+  .headProd .productos .prod {
+    width: 380px;
+  }
+  .headProd .productos .prod > fieldset {
+    font-size: 24px;
+  }
+  .headProd .productos .prod > fieldset > ol {
+    text-align: center;
+    font-size: 20px;
+  }
+  .headProd .productos .prod > fieldset > ol > li {
+    margin: 0px;
   }
 }
 @media (max-width:768px) {
@@ -808,14 +830,6 @@ footer .pie .pie__2 {
   }
   .headProd .productos .prod {
     width: 90%;
-    border: 3px solid;
-    border-radius: 9px;
-    border-color: darkgreen;
-    font-family: fredoka;
-    color: indigo;
-    padding: 5px;
-    background-color: rgb(195, 231, 219);
-    box-shadow: 15px 15px 15px black;
   }
   .headProd .productos .prod > fieldset {
     font-size: 28px;
@@ -829,6 +843,13 @@ footer .pie .pie__2 {
     font-size: 90px;
     color: indigo;
     margin-bottom: 30px;
+  }
+  .headProd .productos .prod > fieldset > ol {
+    font-size: 30px;
+    text-align: center;
+  }
+  .headProd .productos .prod > fieldset > ol > li {
+    margin: 0px;
   }
 }
 .fotosProd {
@@ -918,18 +939,17 @@ footer .pie .pie__2 {
   overflow: hidden;
 }
 
-@media (max-width:768px) {
+@media (max-width:1000px) {
   .fotosProd {
     grid-column: 1/4;
     grid-row: 3/4;
     margin-top: 50px;
-    width: 80%;
   }
   .fotosProd .tarjProductos {
     display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin: 10px 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px 20px;
     border: 3px solid;
     border-radius: 20px;
     border-color: darkgreen;
@@ -938,19 +958,116 @@ footer .pie .pie__2 {
     box-shadow: 15px 15px 15px black;
     transition: 2s;
   }
+  .fotosProd .tarjProductos .tarjProductos__1 {
+    background-image: url(../img/kit-alarma-residencial-dos-sensores-infrarrojo-y-un-magnetico-kit-alarma-residencial-dos-sensores-infrarrojo-y-un-magnetico.jpg);
+    transition: 0.5s;
+  }
+  .fotosProd .tarjProductos .tarjProductos__1:hover {
+    transform: scale(0.98);
+    border: 2px solid;
+  }
+  .fotosProd .tarjProductos .tarjProductos__2 {
+    background-image: url(../img/Cerca\ Elétrica\ Intelbras\ 5002\ 100\ Mts\ Cabo\ Aço\ E\ Haste\ 1\,20.jpg);
+    transition: 0.5s;
+  }
+  .fotosProd .tarjProductos .tarjProductos__2:hover {
+    transform: scale(0.98);
+    border: 2px solid;
+  }
+  .fotosProd .tarjProductos .tarjProductos__3 {
+    background-image: url(../img/Marcelo\ Pereto\ on\ Twitter.jpg);
+    transition: 0.5s;
+  }
+  .fotosProd .tarjProductos .tarjProductos__3:hover {
+    transform: scale(0.98);
+    border: 2px solid;
+  }
+  .fotosProd .tarjProductos .tarjProductos__4 {
+    background-image: url(../img/Best\ UPS\ for\ Wi-fi\ Router.jpg);
+    transition: 0.5s;
+  }
+  .fotosProd .tarjProductos .tarjProductos__4:hover {
+    transform: scale(0.98);
+    border: 2px solid;
+  }
+  .fotosProd .tarjProductos .tarjProductos__5 {
+    background-image: url(../img/Nvr\ Ip\ Hikvision\ 16\ Canais\ 4k\ Ds-7616ni-k2\ Sem\ Poe.jpg);
+    transition: 0.5s;
+  }
+  .fotosProd .tarjProductos .tarjProductos__5:hover {
+    transform: scale(0.98);
+    border: 2px solid;
+  }
+  .fotosProd .tarjProductos .tarjProductos__6 {
+    background-image: url(../img/All\ You\ Need\ to\ Know\ to\ Buy\ a\ Security\ Camera\ System.png);
+    transition: 0.5s;
+  }
+  .fotosProd .tarjProductos .tarjProductos__6:hover {
+    transform: scale(0.98);
+    border: 2px solid;
+  }
+  .fotosProd .tarjProductos .tarjProductos__7 {
+    background-image: url(../img/Kanlux\ 460\ Aler\ Jq-30-w\ Bewegungsmelder.jpg);
+    transition: 0.5s;
+  }
+  .fotosProd .tarjProductos .tarjProductos__7:hover {
+    transform: scale(0.98);
+    border: 2px solid;
+  }
   .fotosProd .tarjProductos div {
     background-blend-mode: lighten;
     border-radius: 15px;
     color: rgb(115, 15, 187);
     font-family: fredoka;
     font-weight: bolder;
-    font-size: 30px;
     text-shadow: 2px 2px white;
     padding: 10px;
-    width: 80%;
-    height: 160px;
+    margin: 20px 0px;
+    width: 200px;
+    height: 180px;
     background-size: 100%;
     overflow: hidden;
+  }
+}
+@media (max-width:768px) {
+  .fotosProd {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    margin: 50px auto;
+    width: 600px;
+  }
+  .fotosProd .tarjProductos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+    width: 100%;
+    margin: 9px;
+  }
+  .fotosProd .tarjProductos div {
+    width: 80%;
+    height: 400px;
+    font-size: 37px;
+  }
+}
+@media (max-width:425px) {
+  .fotosProd {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    margin-top: 50px;
+    width: 560px;
+    align-content: center;
+  }
+  .fotosProd .tarjProductos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 98%;
+  }
+  .fotosProd .tarjProductos div {
+    font-size: 30px;
+    width: 70%;
+    height: 320px;
   }
 }
 .busqueda {
@@ -1039,7 +1156,7 @@ footer .pie .pie__2 {
   }
   .busqueda .specProductos ul > li > button {
     padding: 10px;
-    font-size: 30px;
+    font-size: 33px;
   }
   .busqueda .buscarProductos {
     font-size: 40px;
@@ -1180,13 +1297,6 @@ footer .pie .pie__2 {
   grid-column: 1/4;
   grid-row: 3/4;
 }
-.canalNovedades .canal {
-  text-align: center;
-  margin-bottom: 30px;
-  font-family: fredoka;
-  color: indigo;
-  font-size: 40px;
-}
 .canalNovedades .canal__video {
   display: flex;
   justify-content: space-evenly;
@@ -1201,9 +1311,11 @@ footer .pie .pie__2 {
   transition: 2s;
 }
 .canalNovedades .canal__video .canal__video__parr {
-  width: 20%;
+  width: 30%;
+  color: indigo;
   font-family: fredoka;
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 50px;
 }
 .canalNovedades .canal__video .canal__video__res {
   width: 1fr;
@@ -1220,10 +1332,80 @@ footer .pie .pie__2 {
   font-family: fredoka;
 }
 .canalNovedades .canal__video .canal__video__vid {
-  height: 1fr;
-  width: auto;
+  height: 340px;
 }
 
+@media (max-width:1400px) {
+  .canalNovedades .canal__video .canal__video__parr {
+    width: 30%;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .canalNovedades .canal__video .canal__video__res {
+    width: 1fr;
+  }
+  .canalNovedades .canal__video .canal__video__res .canal__video__res__enl {
+    font-size: 16px;
+    list-style: none;
+  }
+  .canalNovedades .canal__video .canal__video__res .canal__video__res__enl > li {
+    line-height: 28px;
+    margin: 10px;
+  }
+  .canalNovedades .canal__video .canal__video__vid {
+    height: 245px;
+    margin: auto 0px;
+  }
+}
+@media (max-width:1000px) {
+  .canalNovedades .canal__video .canal__video__parr {
+    width: 30%;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .canalNovedades .canal__video .canal__video__res {
+    width: 1fr;
+  }
+  .canalNovedades .canal__video .canal__video__res .canal__video__res__enl {
+    font-size: 16px;
+  }
+  .canalNovedades .canal__video .canal__video__res .canal__video__res__enl > li {
+    line-height: 38px;
+    margin: 10px;
+  }
+  .canalNovedades .canal__video .canal__video__vid {
+    height: 166px;
+    margin: auto 0px;
+  }
+}
+@media (max-width:768px) {
+  .canalNovedades .canal__video {
+    display: flex;
+    flex-direction: column;
+  }
+  .canalNovedades .canal__video .canal__video__parr {
+    width: 100%;
+    font-size: 25px;
+    line-height: 60px;
+  }
+  .canalNovedades .canal__video .canal__video__res {
+    width: 1fr;
+  }
+  .canalNovedades .canal__video .canal__video__res .canal__video__res__enl {
+    font-size: 25px;
+  }
+  .canalNovedades .canal__video .canal__video__res .canal__video__res__enl > li {
+    text-align: center;
+    margin: 10px;
+  }
+  .canalNovedades .canal__video .canal__video__res .canal__video__res__enl > li > a {
+    line-height: 60px;
+  }
+  .canalNovedades .canal__video .canal__video__vid {
+    height: 350px;
+    margin: 0px auto;
+  }
+}
 /*__________CONTACTO__________*/
 .headContacto {
   grid-column: 1/4;
@@ -1347,21 +1529,65 @@ footer .pie .pie__2 {
   border-radius: 10px;
   margin: 5px;
 }
-.principalContacto .formRegistro form {
-  padding: 6px;
-}
 
-.mensaje {
+@media (max-width:768px) {
+  .principalContacto .formRegistro > form {
+    font-family: fredoka;
+    color: coral;
+    width: 600px;
+    border: 6px solid;
+    border-radius: 16px;
+    background-color: rgb(195, 231, 219);
+    padding: 10px;
+    box-shadow: 15px 15px 15px black;
+  }
+  .principalContacto .formRegistro > form > fieldset > label {
+    font-size: 25px;
+    padding: 20px;
+  }
+  .principalContacto .formRegistro > form > fieldset > label > input {
+    font-size: 20px;
+  }
+  .principalContacto .formRegistro > form > fieldset > legend {
+    color: indigo;
+    font-size: 26px;
+  }
+  .principalContacto .formRegistro > form > fieldset > fieldset > legend {
+    color: indigo;
+    font-size: 26px;
+  }
+  .principalContacto .formRegistro > form > fieldset > fieldset > label {
+    font-size: 25px;
+    margin: 0px 7px;
+  }
+  .principalContacto .formRegistro > form > fieldset > fieldset > label > input {
+    transform: scale(2);
+    margin: 0px 7px;
+  }
+  .principalContacto .formRegistro > form > fieldset .resEnv {
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bolder;
+    font-style: oblique;
+    color: brown;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 5px;
+  }
+}
+.dudas {
   grid-column: 1/4;
   grid-row: 3/4;
+  width: 100%;
 }
-.mensaje .areaMensaje {
+.dudas .mensaje .areaMensaje {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-.mensaje .areaMensaje > fieldset {
+.dudas .mensaje .areaMensaje > fieldset {
+  width: 600px;
   padding: 10px;
   font-family: fredoka;
   font-size: 16px;
@@ -1375,18 +1601,18 @@ footer .pie .pie__2 {
   padding: 15px;
   box-shadow: 15px 15px 15px black;
 }
-.mensaje .areaMensaje > fieldset > legend {
+.dudas .mensaje .areaMensaje > fieldset > legend {
   color: indigo;
   padding-top: 20px;
 }
-.mensaje .areaMensaje > fieldset > textarea {
+.dudas .mensaje .areaMensaje > fieldset > textarea {
   font-family: fredoka;
   width: 90%;
   border: 2px solid;
   border-radius: 16px;
   padding: 10px;
 }
-.mensaje .areaMensaje > fieldset > input {
+.dudas .mensaje .areaMensaje > fieldset > input {
   padding: 6px;
   font-size: 16px;
   font-weight: bolder;

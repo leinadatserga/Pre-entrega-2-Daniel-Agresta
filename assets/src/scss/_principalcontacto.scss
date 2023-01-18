@@ -14,7 +14,7 @@
         }
         > form{
             font-family: fredoka;
-            color: coral;
+            color: $color2;
             width: 400px; 
             border: 6px solid;
             border-radius: 16px;
@@ -25,7 +25,7 @@
                 padding: 20px;
             }
             > legend{
-                color: indigo;
+                color: $color1;
             }
             .resEnv{
                 padding: 6px;
@@ -39,7 +39,57 @@
             }
         }
     }
-    .formRegistro form{
-        padding: 6px;
-    }
+}
+@media($tablet){
+    .principalContacto{
+        .formRegistro{
+            > form{
+                font-family: fredoka;
+                color: coral;
+                width: 600px; 
+                border: 6px solid;
+                border-radius: 16px;
+                background-color: $colorPrincipal;
+                padding: 10px;
+                box-shadow: $sombra;
+                > fieldset{
+                    > label{
+                        font-size: 25px;
+                        padding: 20px;
+                        > input{
+                            font-size: 20px;
+                        }
+                    }
+                    > legend{
+                        color: $color1;
+                        font-size: 26px;
+                    }
+                    > fieldset{
+                        > legend{
+                            color: $color1;
+                            font-size: 26px;
+                        }
+                        > label{
+                            font-size: 25px;
+                            margin: 0px 7px;
+                            > input{
+                                transform: scale(2);
+                                margin: 0px 7px;
+                            }
+                        }
+                    }
+                    .resEnv{
+                        padding: 6px;
+                        font-size: 16px;
+                        font-weight: bolder;
+                        font-style: oblique;
+                        color: brown;
+                        border: 2px solid;
+                        border-radius: 10px;
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+    } 
 }

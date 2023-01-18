@@ -1,13 +1,6 @@
 .canalNovedades{
     grid-column: 1/4;
     grid-row: 3/4;
-    .canal{
-        text-align: center;
-        margin-bottom: 30px;
-        font-family: fredoka;
-        color: $color1;
-        font-size: 40px;
-    }
     .canal__video{
         display: flex;
         justify-content: space-evenly;
@@ -18,12 +11,14 @@
         border-color: darkgreen;
         padding: 10px;
         background-color: $colorPrincipal;
-        box-shadow: 15px 15px 15px black;
+        box-shadow: $sombra;
         transition: 2s;
         .canal__video__parr{
-            width: 20%;
+            width: 30%;
+            color: $color1;
             font-family: fredoka;
-            font-size: 25px;
+            font-size: 30px;
+            line-height: 50px;
         }
         .canal__video__res{
             width: 1fr;
@@ -41,8 +36,90 @@
             }
         }
         .canal__video__vid{
-            height: 1fr;
-            width: auto;
+            height: 340px;
+        }
+    }
+}
+@media($portatil-g){
+    .canalNovedades{
+        .canal__video{
+            .canal__video__parr{
+                width: 30%;
+                font-size: 18px;
+                line-height: 30px;
+            }
+            .canal__video__res{
+                width: 1fr;
+                .canal__video__res__enl{
+                    font-size: 16px;
+                    list-style: none;
+                    > li{
+                        line-height: 28px;
+                        margin: 10px;
+                    }
+        
+                }
+            }
+            .canal__video__vid{
+                height: 245px;
+                margin: auto 0px;
+            }
+        }
+    }
+}
+@media($portatil-c){
+    .canalNovedades{
+        .canal__video{
+            .canal__video__parr{
+                width: 30%;
+                font-size: 18px;
+                line-height: 30px;
+            }
+            .canal__video__res{
+                width: 1fr;
+                .canal__video__res__enl{
+                    font-size: 16px;
+                    > li{
+                        line-height: 38px;
+                        margin: 10px;
+                    }
+        
+                }
+            }
+            .canal__video__vid{
+                height: 166px;
+                margin: auto 0px;
+            }
+        }
+    }
+}
+@media($tablet){
+    .canalNovedades{
+        .canal__video{
+            display: flex;
+            flex-direction: column;
+            .canal__video__parr{
+                width: 100%;
+                font-size: 25px;
+                line-height: 60px;
+            }
+            .canal__video__res{
+                width: 1fr;
+                .canal__video__res__enl{
+                    font-size: 25px;
+                    > li{
+                        text-align: center;
+                        > a{
+                            line-height: 60px;
+                        }
+                        margin: 10px;
+                    }
+                }
+            }
+            .canal__video__vid{
+                height: 350px;
+                margin: 0px auto;
+            }
         }
     }
 }

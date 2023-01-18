@@ -1,47 +1,51 @@
-.mensaje{
+.dudas{
     grid-column: 1/4;
-    grid-row: 3/4;
-    .areaMensaje{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        > fieldset{
-            > legend{
-                color: $color1;
-                padding-top: 20px;
-            }
-            padding: 10px;
-            font-family: fredoka;
-            font-size: 16px;
-            color: $color1;
-            font-family: fredoka;
-            color: $color2;
-            width: 30%; 
-            border: 6px solid;
-            border-radius: 16px;
-            background-color: $colorPrincipal;
-            padding: 15px;
-            box-shadow: $sombra;
-            > textarea{
-                font-family: fredoka;
-                width: 90%; 
-                border: 2px solid;
-                border-radius: 16px;
+        grid-row: 3/4;
+        width: 100%;
+    .mensaje{
+        .areaMensaje{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            > fieldset{
+                width: 600px;
+                > legend{
+                    color: $color1;
+                    padding-top: 20px;
+                }
                 padding: 10px;
-            }
-            > input{
-                padding: 6px;
+                font-family: fredoka;
                 font-size: 16px;
-                font-weight: bolder;
-                font-style: oblique;
-                color: brown;
-                border: 2px solid;
-                border-radius: 10px;
-                margin: 5px;
+                color: $color1;
+                font-family: fredoka;
+                color: $color2;
+                width: 30%; 
+                border: 6px solid;
+                border-radius: 16px;
+                background-color: $colorPrincipal;
+                padding: 15px;
+                box-shadow: $sombra;
+                > textarea{
+                    font-family: fredoka;
+                    width: 90%; 
+                    border: 2px solid;
+                    border-radius: 16px;
+                    padding: 10px;
+                }
+                > input{
+                    padding: 6px;
+                    font-size: 16px;
+                    font-weight: bolder;
+                    font-style: oblique;
+                    color: brown;
+                    border: 2px solid;
+                    border-radius: 10px;
+                    margin: 5px;
+                }
             }
-        }
-    } 
+        } 
+    }
 }
 .enlaces{
     padding: 25px;

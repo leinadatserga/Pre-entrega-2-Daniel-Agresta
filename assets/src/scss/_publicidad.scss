@@ -47,21 +47,24 @@
     }   
 }
 @media ($portatil-c){
-    .publicidad__pub1{
-        font-size: 40px;
-        padding: 10px;
-    }
-    .publicidad__pub2{
-        padding: 10px;
-        font-size: 20px;
-    }
-    .publicidad__pub3{
-        padding: 10px;
-        font-size: 20px;
-    }
-    .publicidad__pub4{
-        padding: 10px;
-        font-size: 20px;
+    .publicidad{
+        height: 370px;
+        .publicidad__pub1{
+            font-size: 40px;
+            padding: 10px;
+        }
+        .publicidad__pub2{
+            padding: 10px;
+            font-size: 20px;
+        }
+        .publicidad__pub3{
+            padding: 10px;
+            font-size: 20px;
+        }
+        .publicidad__pub4{
+            padding: 10px;
+            font-size: 20px;
+        }
     }   
 }
 @media ($cel-g){
@@ -72,9 +75,9 @@
 }
 @media ($tablet){
     .publicidad{
-        height: 60%;
+        height: 390px;
         .publicidad__pub1{
-            font-size: 50px;
+            font-size: 45px;
         }
     }
 }
