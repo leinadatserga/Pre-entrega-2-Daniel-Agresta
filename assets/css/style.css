@@ -17,7 +17,7 @@
   background-blend-mode: lighten;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 280px 440px auto 200px 100px;
+  grid-template-rows: 280px 640px auto auto auto;
   gap: 0px 15px;
 }
 .grillaPrincipal .tituloPrincipal {
@@ -383,7 +383,7 @@
   }
 }
 .publicidad {
-  height: 60%;
+  height: 40%;
   font-family: fredoka;
   background-image: radial-gradient(aquamarine 60%, rgb(13, 156, 156));
   display: flex;
@@ -679,6 +679,7 @@ footer .pie .pie__2 {
 .serPri {
   grid-column: 1/4;
   grid-row: 3/4;
+  margin-bottom: 100px;
 }
 .serPri .serviciosPrincipal {
   display: flex;
@@ -895,7 +896,7 @@ footer .pie .pie__2 {
 .fotosProd {
   grid-column: 1/4;
   grid-row: 3/4;
-  margin-top: 50px;
+  margin: 50px 0px 60px;
 }
 .fotosProd .tarjProductos {
   display: flex;
@@ -1337,6 +1338,7 @@ footer .pie .pie__2 {
 .canalNovedades {
   grid-column: 1/4;
   grid-row: 3/4;
+  margin-bottom: 80px;
 }
 .canalNovedades .canal__video {
   display: flex;
@@ -1621,7 +1623,7 @@ footer .pie .pie__2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .dudas .mensaje .areaMensaje > fieldset {
   padding: 10px;
