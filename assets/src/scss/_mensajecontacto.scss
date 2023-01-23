@@ -8,7 +8,7 @@
             > fieldset{
                 > legend{
                     color: $color1;
-                    font-size: 25px;
+                    font-size: 29px;
                     padding-top: 20px;
                 }
                 padding: 10px;
@@ -23,7 +23,7 @@
                 padding: 15px;
                 box-shadow: $sombra;
                 > textarea{
-                    font-size: 24px;
+                    font-size: 28px;
                     font-family: fredoka;
                     width: 90%; 
                     border: 2px solid;
@@ -32,7 +32,7 @@
                 }
                 > input{
                     padding: 6px;
-                    font-size: 16px;
+                    font-size: 19px;
                     font-weight: bolder;
                     font-style: oblique;
                     color: brown;
@@ -96,17 +96,22 @@
     }  
 }
 @media ($tablet){
-    .enlacesInteres{
-        .enlHorizontal{
-            display: flex;
-            flex-direction: column;
-            row-gap: 60px;
-            align-items: center;
-            > li{
-                list-style: none;
-                > a{
-                    padding: 10px;
-                    font-size: 40px;
+    .dudas{
+        .enlaces{
+            font-size: 70px;
+        }
+        .enlacesInteres{
+            .enlHorizontal{
+                display: flex;
+                flex-direction: column;
+                row-gap: 60px;
+                align-items: center;
+                > li{
+                    list-style: none;
+                    > a{
+                        padding: 10px;
+                        font-size: 40px;
+                    }
                 }
             }
         }

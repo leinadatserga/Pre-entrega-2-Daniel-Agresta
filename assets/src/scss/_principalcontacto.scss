@@ -54,15 +54,15 @@
                 box-shadow: $sombra;
                 > fieldset{
                     > label{
-                        font-size: 25px;
+                        font-size: 28px;
                         padding: 20px;
                         > input{
-                            font-size: 20px;
+                            font-size: 25px;
                         }
                     }
                     > legend{
                         color: $color1;
-                        font-size: 26px;
+                        font-size: 29px;
                     }
                     > fieldset{
                         > legend{
@@ -70,7 +70,7 @@
                             font-size: 26px;
                         }
                         > label{
-                            font-size: 25px;
+                            font-size: 28px;
                             margin: 0px 7px;
                             > input{
                                 transform: scale(2);
@@ -80,7 +80,7 @@
                     }
                     .resEnv{
                         padding: 6px;
-                        font-size: 16px;
+                        font-size: 19px;
                         font-weight: bolder;
                         font-style: oblique;
                         color: brown;

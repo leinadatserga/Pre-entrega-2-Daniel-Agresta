@@ -1584,22 +1584,22 @@ footer .pie .pie__2 {
     box-shadow: 15px 15px 15px black;
   }
   .principalContacto .formRegistro > form > fieldset > label {
-    font-size: 25px;
+    font-size: 28px;
     padding: 20px;
   }
   .principalContacto .formRegistro > form > fieldset > label > input {
-    font-size: 20px;
+    font-size: 25px;
   }
   .principalContacto .formRegistro > form > fieldset > legend {
     color: indigo;
-    font-size: 26px;
+    font-size: 29px;
   }
   .principalContacto .formRegistro > form > fieldset > fieldset > legend {
     color: indigo;
     font-size: 26px;
   }
   .principalContacto .formRegistro > form > fieldset > fieldset > label {
-    font-size: 25px;
+    font-size: 28px;
     margin: 0px 7px;
   }
   .principalContacto .formRegistro > form > fieldset > fieldset > label > input {
@@ -1608,7 +1608,7 @@ footer .pie .pie__2 {
   }
   .principalContacto .formRegistro > form > fieldset .resEnv {
     padding: 6px;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: bolder;
     font-style: oblique;
     color: brown;
@@ -1638,11 +1638,11 @@ footer .pie .pie__2 {
 }
 .dudas .mensaje .areaMensaje > fieldset > legend {
   color: indigo;
-  font-size: 25px;
+  font-size: 29px;
   padding-top: 20px;
 }
 .dudas .mensaje .areaMensaje > fieldset > textarea {
-  font-size: 24px;
+  font-size: 28px;
   font-family: fredoka;
   width: 90%;
   border: 2px solid;
@@ -1651,7 +1651,7 @@ footer .pie .pie__2 {
 }
 .dudas .mensaje .areaMensaje > fieldset > input {
   padding: 6px;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: bolder;
   font-style: oblique;
   color: brown;
@@ -1708,16 +1708,19 @@ footer .pie .pie__2 {
   }
 }
 @media (max-width:768px) {
-  .enlacesInteres .enlHorizontal {
+  .dudas .enlaces {
+    font-size: 70px;
+  }
+  .dudas .enlacesInteres .enlHorizontal {
     display: flex;
     flex-direction: column;
     row-gap: 60px;
     align-items: center;
   }
-  .enlacesInteres .enlHorizontal > li {
+  .dudas .enlacesInteres .enlHorizontal > li {
     list-style: none;
   }
-  .enlacesInteres .enlHorizontal > li > a {
+  .dudas .enlacesInteres .enlHorizontal > li > a {
     padding: 10px;
     font-size: 40px;
   }
