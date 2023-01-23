@@ -458,9 +458,25 @@
   }
 }
 @media (max-width:425px) {
-  .publicidad__pub1 {
-    font-size: 50px;
+  .principal .publicidad {
+    height: 600px;
+  }
+  .principal .publicidad .publicidad__pub1 {
+    font-size: 48px;
+    padding: 2px;
+    margin: 2px;
+  }
+  .principal .publicidad .publicidad__pub2 {
+    padding: 10px;
+    font-size: 25px;
+  }
+  .principal .publicidad .publicidad__pub3 {
     padding: 5px;
+    font-size: 28px;
+  }
+  .principal .publicidad .publicidad__pub4 {
+    padding: 5px;
+    font-size: 28px;
   }
 }
 @media (max-width:768px) {

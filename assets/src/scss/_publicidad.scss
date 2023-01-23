@@ -73,11 +73,29 @@
     }   
 }
 @media ($cel-g){
-    .publicidad__pub1{
-        font-size: 50px;
-        padding: 5px;
-    }  
+    .principal{
+        .publicidad{
+        height: 600px;
+        .publicidad__pub1{
+            font-size: 48px;
+            padding: 2px;
+            margin: 2px;
+        }
+        .publicidad__pub2{
+            padding: 10px;
+            font-size: 25px;
+        }
+        .publicidad__pub3{
+            padding: 5px;
+            font-size: 28px;
+        }
+        .publicidad__pub4{
+            padding: 5px;
+            font-size: 28px;
+        }
+    } 
 }
+    }
 @media ($tablet){
     .publicidad{
         height: 390px;
