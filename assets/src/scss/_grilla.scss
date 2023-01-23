@@ -5,7 +5,7 @@
     background-blend-mode:lighten;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 280px 440px 400px 600px 200px 100px;
+    grid-template-rows: 280px 440px auto 200px 100px;
     gap: 0px 15px;
     .tituloPrincipal{
         display: none;
@@ -17,29 +17,42 @@
         text-align: start;
         padding: 10px;
     }
+    .iconoPrincipal{
+        display: none;
+    }
 }
 @media ($portatil-g){
     .grillaPrincipal{
         display: grid;
-        grid-template-rows: 250px 440px 400px 700px 200px 100px;
+        grid-template-rows: 230px 440px auto auto auto;
         align-content: center;
     }
 }
 @media ($portatil-c){
     .grillaPrincipal{
         display: grid;
-        grid-template-rows: 250px auto auto 700px auto auto;
+        grid-template-rows: 230px auto auto auto auto;
         align-content: center;
     }
 }
 @media ($tablet){
     .grillaPrincipal{
+        grid-template-rows: 230px auto auto auto auto;
         .tituloPrincipal{
         display: block;
         text-align: center;
         font-size: 45px;
         color: $color1;
         z-index: 2;
+        }
+        .iconoPrincipal{
+            display: block;
+            grid-column: 1/4;
+            grid-row: 1/2;
+            z-index: 2;
+            height: 60px;
+            margin-left: 36px;
+            margin-top: 10px;
         }
     }
 }

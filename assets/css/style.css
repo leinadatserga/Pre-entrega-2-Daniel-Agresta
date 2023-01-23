@@ -17,7 +17,7 @@
   background-blend-mode: lighten;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 280px 440px 400px 600px 200px 100px;
+  grid-template-rows: 280px 440px auto 200px 100px;
   gap: 0px 15px;
 }
 .grillaPrincipal .tituloPrincipal {
@@ -30,28 +30,43 @@
   text-align: start;
   padding: 10px;
 }
+.grillaPrincipal .iconoPrincipal {
+  display: none;
+}
 
 @media (max-width:1400px) {
   .grillaPrincipal {
     display: grid;
-    grid-template-rows: 250px 440px 400px 700px 200px 100px;
+    grid-template-rows: 230px 440px auto auto auto;
     align-content: center;
   }
 }
 @media (max-width:1000px) {
   .grillaPrincipal {
     display: grid;
-    grid-template-rows: 250px auto auto 700px auto auto;
+    grid-template-rows: 230px auto auto auto auto;
     align-content: center;
   }
 }
 @media (max-width:768px) {
+  .grillaPrincipal {
+    grid-template-rows: 230px auto auto auto auto;
+  }
   .grillaPrincipal .tituloPrincipal {
     display: block;
     text-align: center;
     font-size: 45px;
     color: indigo;
     z-index: 2;
+  }
+  .grillaPrincipal .iconoPrincipal {
+    display: block;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    z-index: 2;
+    height: 60px;
+    margin-left: 36px;
+    margin-top: 10px;
   }
 }
 @media (max-width:425px) {
@@ -97,6 +112,7 @@
   padding: 2px;
   border: 3px solid;
   border-radius: 7px;
+  border-color: indigo;
 }
 .navIni .botonesInicio > button:hover {
   transform: scale(1.25);
@@ -231,6 +247,9 @@
     margin: 10px 0px;
     padding: 1px;
   }
+  .navIni .navegadorEnlaces > ul > li:hover {
+    transform: scale(1);
+  }
   .navIni .navegadorEnlaces > ul > li > a {
     font-size: 30px;
   }
@@ -241,6 +260,8 @@
     left: 200px;
   }
   .navIni .botonesInicio > button {
+    border: 10px double;
+    border-color: darkgreen;
     margin: 10px 30px;
   }
   .navIni .botonesInicio > button > a {
@@ -263,7 +284,7 @@
   position: relative;
 }
 .logoInicio > img {
-  height: 90%;
+  height: 100%;
   box-shadow: 15px 15px 15px black;
   border-radius: 20px;
   animation-name: movlogo;
@@ -271,18 +292,17 @@
   animation-iteration-count: infinite;
   animation-delay: 0s;
 }
-@media (max-width:1000px) {
-  .logoInicio > img {
-    height: 50%;
-  }
-}
 @keyframes movlogo {
   0% {
     transform: scale(1.05);
   }
   25% {
     transform: scale(1);
-    opacity: 20%;
+    opacity: 60%;
+  }
+  40% {
+    transform: scale(1.05);
+    opacity: 100%;
   }
   50% {
     transform: scale(1.05);
@@ -294,29 +314,26 @@
   }
   75% {
     transform: scale(1);
-    opacity: 20%;
+    opacity: 60%;
   }
   100% {
     transform: scale(1.05);
   }
 }
+@media (max-width:1000px) {
+  .logoInicio > img {
+    height: 80%;
+  }
+}
 @media (max-width:768px) {
   .logoInicio > img {
     animation: none;
-    height: 60%;
+    height: 95%;
     margin: auto;
     width: auto;
     box-shadow: 15px 15px 15px black;
     border-radius: 20px;
-    transform: translateY(-150px);
-  }
-}
-@media (max-width:425px) {
-  .logoInicio .logoInicio > img {
-    z-index: 1;
-    height: 40%;
-    margin: auto;
-    width: auto;
+    transform: translateY(-110px);
   }
 }
 
@@ -366,7 +383,7 @@
   }
 }
 .publicidad {
-  height: 90%;
+  height: 60%;
   font-family: fredoka;
   background-image: radial-gradient(aquamarine 60%, rgb(13, 156, 156));
   display: flex;
@@ -414,6 +431,11 @@
   text-align: center;
 }
 
+@media (max-width:1400px) {
+  .publicidad {
+    height: 500px;
+  }
+}
 @media (max-width:1000px) {
   .publicidad {
     height: 370px;
@@ -551,6 +573,7 @@ footer .pie .pie__2 {
   width: 25%;
   height: 25%;
   box-shadow: 15px 15px 15px black;
+  border-radius: 15px;
 }
 .headServicios .servicios .titServicios {
   font-size: 90px;
@@ -751,6 +774,7 @@ footer .pie .pie__2 {
   width: 25%;
   height: 25%;
   box-shadow: 15px 15px 15px black;
+  border-radius: 15px;
 }
 .headProd .productos .titProductos {
   font-size: 90px;
@@ -766,7 +790,7 @@ footer .pie .pie__2 {
   box-shadow: 15px 15px 15px black;
 }
 .headProd .productos .prod {
-  width: 60%;
+  width: 20%;
   border: 3px solid;
   border-radius: 9px;
   border-color: darkgreen;
@@ -1072,7 +1096,7 @@ footer .pie .pie__2 {
 }
 .busqueda {
   grid-column: 1/4;
-  grid-row: 4/5;
+  flex-wrap: wrap;
 }
 .busqueda .busqProductos {
   font-family: fredoka;
@@ -1184,6 +1208,7 @@ footer .pie .pie__2 {
   width: 25%;
   height: 25%;
   box-shadow: 15px 15px 15px black;
+  border-radius: 15px;
 }
 .headDestacados .destacados .titDestacados {
   font-size: 90px;
@@ -1422,6 +1447,7 @@ footer .pie .pie__2 {
   width: 25%;
   height: 25%;
   box-shadow: 15px 15px 15px black;
+  border-radius: 15px;
 }
 .headContacto .contacto .titContacto {
   font-size: 90px;
@@ -1576,25 +1602,18 @@ footer .pie .pie__2 {
   }
 }
 .dudas {
-  grid-column: 1/4;
-  grid-row: 3/4;
-  width: 100%;
-}
-.dudas .mensaje .areaMensaje {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 50px;
 }
 .dudas .mensaje .areaMensaje > fieldset {
-  width: 600px;
   padding: 10px;
   font-family: fredoka;
   font-size: 16px;
   color: indigo;
   font-family: fredoka;
   color: coral;
-  width: 30%;
   border: 6px solid;
   border-radius: 16px;
   background-color: rgb(195, 231, 219);
@@ -1603,9 +1622,11 @@ footer .pie .pie__2 {
 }
 .dudas .mensaje .areaMensaje > fieldset > legend {
   color: indigo;
+  font-size: 25px;
   padding-top: 20px;
 }
 .dudas .mensaje .areaMensaje > fieldset > textarea {
+  font-size: 24px;
   font-family: fredoka;
   width: 90%;
   border: 2px solid;
@@ -1622,23 +1643,24 @@ footer .pie .pie__2 {
   border-radius: 10px;
   margin: 5px;
 }
-
-.enlaces {
+.dudas .enlaces {
   padding: 25px;
+  margin: 50px 0px;
   font-family: fredoka;
   font-size: 50px;
   color: indigo;
 }
-
-.enlacesInteres .enlHorizontal {
+.dudas .enlacesInteres {
+  width: 100%;
+}
+.dudas .enlacesInteres .enlHorizontal {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 }
-.enlacesInteres .enlHorizontal > li {
+.dudas .enlacesInteres .enlHorizontal > li {
   list-style: none;
 }
-.enlacesInteres .enlHorizontal > li > a {
+.dudas .enlacesInteres .enlHorizontal > li > a {
   text-decoration: none;
   padding: 10px;
   font-size: 20px;
@@ -1653,6 +1675,22 @@ footer .pie .pie__2 {
   box-shadow: 15px 15px 15px black;
 }
 
+@media (max-width:1000px) {
+  .enlacesInteres .enlHorizontal {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    align-items: center;
+  }
+  .enlacesInteres .enlHorizontal > li {
+    list-style: none;
+  }
+  .enlacesInteres .enlHorizontal > li > a {
+    padding: 10px;
+    font-size: 40px;
+    width: max-content;
+  }
+}
 @media (max-width:768px) {
   .enlacesInteres .enlHorizontal {
     display: flex;
@@ -1664,17 +1702,7 @@ footer .pie .pie__2 {
     list-style: none;
   }
   .enlacesInteres .enlHorizontal > li > a {
-    text-decoration: none;
     padding: 10px;
     font-size: 40px;
-    font-weight: bolder;
-    font-family: fredoka;
-    width: max-content;
-    border-radius: 15px;
-    border: 3px solid;
-    border-color: darkgreen;
-    color: indigo;
-    background-color: rgb(195, 231, 219);
-    box-shadow: 15px 15px 15px black;
   }
 }

@@ -1,17 +1,14 @@
 .dudas{
-    grid-column: 1/4;
-        grid-row: 3/4;
-        width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
     .mensaje{
         .areaMensaje{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
             > fieldset{
-                width: 600px;
                 > legend{
                     color: $color1;
+                    font-size: 25px;
                     padding-top: 20px;
                 }
                 padding: 10px;
@@ -20,13 +17,13 @@
                 color: $color1;
                 font-family: fredoka;
                 color: $color2;
-                width: 30%; 
                 border: 6px solid;
                 border-radius: 16px;
                 background-color: $colorPrincipal;
                 padding: 15px;
                 box-shadow: $sombra;
                 > textarea{
+                    font-size: 24px;
                     font-family: fredoka;
                     width: 90%; 
                     border: 2px solid;
@@ -46,23 +43,23 @@
             }
         } 
     }
-}
-.enlaces{
-    padding: 25px;
-            font-family: fredoka;
-            font-size: 50px;
-            color: $color1;
-}
-.enlacesInteres{
-    .enlHorizontal{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        > li{
-            list-style: none;
-            > a{
-                text-decoration: none;
-                padding: 10px;
+    .enlaces{
+        padding: 25px;
+        margin: 50px 0px;
+        font-family: fredoka;
+        font-size: 50px;
+        color: $color1;
+    }
+    .enlacesInteres{
+        width: 100%;
+        .enlHorizontal{
+            display: flex;
+            justify-content: space-around;
+            > li{
+                list-style: none;
+                > a{
+                    text-decoration: none;
+                    padding: 10px;
                     font-size: 20px;
                     font-weight: bolder;
                     font-family: fredoka;
@@ -73,9 +70,30 @@
                     color: $color1;
                     background-color: $colorPrincipal;
                     box-shadow: $sombra;
+                }
             }
         }
     }
+}
+
+
+@media ($portatil-c){
+    .enlacesInteres{
+        .enlHorizontal{
+            display: flex;
+            flex-direction: column;
+            row-gap: 60px;
+            align-items: center;
+            > li{
+                list-style: none;
+                > a{
+                    padding: 10px;
+                    font-size: 40px;
+                    width: max-content;
+                }
+            }
+        }
+    }  
 }
 @media ($tablet){
     .enlacesInteres{
@@ -87,18 +105,8 @@
             > li{
                 list-style: none;
                 > a{
-                    text-decoration: none;
                     padding: 10px;
-                        font-size: 40px;
-                        font-weight: bolder;
-                        font-family: fredoka;
-                        width: max-content;
-                        border-radius: 15px;
-                        border: 3px solid;
-                        border-color: darkgreen;
-                        color: $color1;
-                        background-color: $colorPrincipal;
-                        box-shadow: $sombra;
+                    font-size: 40px;
                 }
             }
         }

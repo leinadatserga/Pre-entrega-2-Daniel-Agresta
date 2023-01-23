@@ -13,6 +13,7 @@
             padding: 2px;
             border: 3px solid;
             border-radius: 7px;
+            border-color: $color1;
             &:hover{
                 transform: scale(1.25);
                 box-shadow: 4px 4px 8px;
@@ -155,6 +156,9 @@
                 > li{
                     margin: 10px 0px;
                     padding: 1px;
+                    &:hover{
+                        transform: scale(1);
+                    }
                     > a{
                         font-size: 30px;
                     }
@@ -167,6 +171,8 @@
             top: 413px;
             left: 200px;
             > button{
+                border: 10px double;
+                border-color: darkgreen;
                 margin: 10px 30px;
                 > a{
                     font-size: 30px;

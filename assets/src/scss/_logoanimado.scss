@@ -5,7 +5,7 @@
     margin: 0px auto;
     position: relative;
     > img{
-        height: 90%;
+        height: 100%;
         box-shadow: $sombra;
         border-radius: 20px;
         animation-name: movlogo;
@@ -13,38 +13,30 @@
         animation-iteration-count: infinite;
         animation-delay: 0s;
     }
-    @media ($portatil-c){
-        > img{
-            height: 50%;
-        } 
-    }
 @keyframes movlogo{
     0%{transform: scale(1.05);}
-    25%{transform: scale(1); opacity: 20%;}
+    25%{transform: scale(1); opacity: 60%;}
+    40%{transform: scale(1.05);opacity: 100%;}
     50%{transform: scale(1.05);opacity: 100%;}
     60%{transform: scale(1.05);opacity: 100%;}
-    75%{transform: scale(1); opacity: 20%;}
+    75%{transform: scale(1); opacity: 60%;}
     100%{transform: scale(1.05);}
+}
+@media ($portatil-c){
+    > img{
+        height: 80%;
+    } 
 }
 @media ($tablet){
     > img{
         animation: none;
-        height: 60%;
+        height: 95%;
         margin: auto;
         width: auto;
         box-shadow: $sombra;
         border-radius: 20px;
-        transform: translateY(-150px);
+        transform: translateY(-110px);
     }
 }
-@media ($cel-g){
-    .logoInicio{
-        > img{
-            z-index: 1;
-            height: 40%;
-            margin: auto;
-            width: auto;
-        }
-    }
-}
+
 }

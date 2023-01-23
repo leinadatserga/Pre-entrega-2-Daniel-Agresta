@@ -1,6 +1,6 @@
 .busqueda{
     grid-column: 1/4;
-    grid-row: 4/5;
+    flex-wrap: wrap;
     .busqProductos{
         font-family: fredoka;
         padding: 20px;

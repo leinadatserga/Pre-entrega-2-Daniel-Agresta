@@ -11,12 +11,13 @@
             width: 25%;
             height: 25%;
             box-shadow: $sombra;
+            border-radius: 15px;
         }
         .titProductos{
             @include titulos(90px, $color2, $color1)
         }
         .prod{
-            width: 60%;
+            width: 20%;
             border: 3px solid;
             border-radius: 9px;
             border-color: darkgreen;
